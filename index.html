@@ -1,0 +1,2122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VK INTERACTIVES - Where Every Journey Holds a Secret.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Official website for VK INTERACTIVES. Explore our innovative games and software like 'To the Life', 'Mood Tracker', 'Motivateme', and 'M&M', plus our new Crochet Hub!">
+  <link rel="icon" href="favicon.ico">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-app-pub-7502821186819058"
+     crossorigin="anonymous"></script>
+  <style>
+    /* CSS Variables */
+    :root {
+      --primary-bg: #0a0a0a;
+      --text-color: #e0e0e0; /* Slightly lighter for futuristic feel */
+      --accent-color: #00ffff; /* Bright Cyan */
+      --accent-hover: #00e6e6; /* Slightly darker cyan for hover */
+      --accent-glow: rgba(0, 255, 255, 0.6);
+      --accent-glow-strong: rgba(0, 255, 255, 0.8);
+      --dark-panel-bg: #1a1a1a; /* Darker background for solid elements */
+      --glass-bg-light: rgba(255, 255, 255, 0.08); /* More transparent */
+      --glass-bg-dark: rgba(0, 0, 0, 0.6); /* Darker, slightly opaque glass */
+
+      --border-accent: 3px solid var(--accent-color);
+      --border-dark: 3px solid #333;
+      --border-glass: 2px solid rgba(0, 255, 255, 0.4); /* Refined glass border */
+      --shadow-accent-light: 0 0 15px var(--accent-glow);
+      --shadow-accent-medium: 0 0 20px var(--accent-glow); /* Stronger medium glow */
+      --shadow-accent-heavy: 0 0 40px var(--accent-glow-strong); /* Very strong glow */
+
+      --spacing-sm: 10px;
+      --spacing-md: 20px;
+      --spacing-lg: 30px;
+      --spacing-xl: 40px;
+
+      --font-size-base: 1rem;
+      --font-size-sm: 0.9rem;
+      --font-size-lg: 1.2rem;
+      --font-size-xl: 2.2rem; /* Slightly larger for impact */
+      --font-size-heading: 2.8rem; /* More prominent headings */
+
+      --transition-fast: 0.2s ease-out;
+      --transition-medium: 0.3s ease-out;
+      --transition-slow: 0.4s ease-out;
+      
+      /* --- NEW ROYAL THEME VARIABLES --- */
+      --royal-gold: #FFD700; /* Solid Gold */
+      --royal-red: #8B0000; /* Dark Red/Maroon */
+      --royal-glow: rgba(255, 215, 0, 0.8);
+
+      /* --- NEW CROCHET HUB VARIABLES --- */
+      --yarn-accent: #ff8c00; /* Dark Orange/Amber for Warmth */
+      --yarn-text: #fff0e6;
+      --yarn-glow: rgba(255, 140, 0, 0.7);
+    }
+
+    /* Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--primary-bg);
+      color: var(--text-color);
+      font-family: 'Segoe UI', 'Arial', sans-serif; /* Fallback for futuristic font */
+      /* If using Google Font, uncomment: */
+      /* font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif; */
+      padding: var(--spacing-md);
+      text-align: center;
+      overflow-x: hidden;
+      position: relative; /* For background effects */
+      min-height: 100vh; /* Ensure full height for background */
+
+      /* Futuristic Background Pattern */
+      background-image:
+        radial-gradient(circle at center, rgba(0, 255, 255, 0.05) 0%, transparent 70%),
+        linear-gradient(45deg, var(--primary-bg) 25%, transparent 25%, transparent 75%, var(--primary-bg) 75%, var(--primary-bg)),
+        linear-gradient(135deg, var(--primary-bg) 25%, transparent 25%, transparent 75%, var(--primary-bg) 75%, var(--primary-bg));
+      background-size: 50px 50px;
+      background-position: 0 0, 10px 10px;
+    }
+
+    h1, h2, h3 {
+      color: var(--accent-color);
+      margin-bottom: var(--spacing-md);
+      text-shadow: 0 0 5px rgba(0, 255, 255, 0.3); /* Subtle text glow */
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: color var(--transition-fast), text-shadow var(--transition-fast);
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+      text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+    }
+
+    /* Header */
+    header {
+      margin-bottom: var(--spacing-xl);
+      padding-top: var(--spacing-md);
+    }
+
+    header h1 {
+      font-size: var(--font-size-heading);
+      margin-top: var(--spacing-md);
+      margin-bottom: var(--spacing-sm);
+      color: var(--text-color); /* Main title stands out */
+      text-shadow: var(--shadow-accent-light);
+    }
+
+    .tagline {
+      font-size: var(--font-size-lg);
+      color: var(--accent-color);
+      margin-bottom: var(--spacing-xl);
+      text-shadow: 0 0 3px rgba(0, 255, 255, 0.3);
+    }
+
+    .top-logo-video {
+      width: 140px; /* Slightly larger */
+      height: 140px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto var(--spacing-md);
+      border: var(--border-accent);
+      box-shadow: var(--shadow-accent-medium);
+      position: relative; /* For animation */
+      animation: pulsate 2s infinite alternate ease-in-out; /* Subtle pulse */
+    }
+
+    .top-logo-video iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Main Hero Section */
+    .hero-video-section {
+      position: relative;
+      width: 100%;
+      max-width: 1000px; /* Slightly wider */
+      margin: 0 auto var(--spacing-xl);
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      border-radius: 20px; /* More rounded */
+      overflow: hidden;
+      border: var(--border-dark);
+      box-shadow: var(--shadow-accent-heavy); /* Stronger initial glow */
+      transition: box-shadow var(--transition-medium);
+    }
+
+    .hero-video-section:hover {
+        box-shadow: 0 0 60px var(--accent-glow-strong); /* Even stronger on hover */
+    }
+
+    .hero-video-section iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .count-overlay {
+      position: absolute;
+      top: var(--spacing-md); /* More space from top */
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 var(--spacing-lg); /* More padding */
+      z-index: 10;
+    }
+
+    .count-circle {
+      width: 110px; /* Slightly larger */
+      height: 110px;
+      border-radius: 50%;
+      background: rgba(0, 255, 255, 0.08);
+      border: 4px solid var(--accent-color); /* Thicker border */
+      color: var(--accent-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: var(--shadow-accent-light);
+      backdrop-filter: blur(8px); /* More blur for glassy effect */
+      font-weight: bold;
+      transition: transform var(--transition-medium), box-shadow var(--transition-medium), border-color var(--transition-medium);
+    }
+
+    .count-circle:hover {
+      transform: translateY(-8px) scale(1.1); /* More pronounced lift */
+      box-shadow: 0 0 30px var(--accent-glow-strong); /* Stronger glow on hover */
+      border-color: var(--accent-hover);
+    }
+
+    .count-circle .number {
+      font-size: var(--font-size-xl);
+      text-shadow: var(--shadow-accent-light);
+    }
+
+    .count-circle .label {
+      font-size: 0.9rem; /* Slightly larger label */
+      margin-top: 6px;
+      color: var(--text-color);
+    }
+
+    /* Panel Buttons */
+    .panel-btn {
+      position: absolute;
+      top: var(--spacing-md); /* Aligned with count circles */
+      width: 60px; /* Larger buttons */
+      height: 60px;
+      border-radius: 50%;
+      background-color: var(--accent-color);
+      color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.8rem; /* Larger icon */
+      cursor: pointer;
+      z-index: 1000;
+      transition: opacity var(--transition-medium), background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+      border: none;
+      box-shadow: var(--shadow-accent-medium);
+    }
+
+    .panel-btn#gameBtn { right: var(--spacing-md); }
+    .panel-btn#softwareBtn { left: var(--spacing-md); }
+
+    .panel-btn:hover {
+      background-color: var(--accent-hover);
+      transform: scale(1.15) rotate(5deg); /* More dynamic hover */
+      box-shadow: 0 0 25px var(--accent-glow-strong);
+    }
+
+    .panel-btn.hidden {
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0.8); /* Shrink when hidden */
+    }
+
+    /* Slide Panels (Games & Software) */
+    .slide-panel {
+      position: fixed;
+      top: 0;
+      width: 85%; /* Slightly wider */
+      max-width: 450px; /* Wider max width */
+      height: 100%;
+      background: var(--glass-bg-light);
+      backdrop-filter: blur(15px); /* More blur for stronger glass */
+      color: var(--text-color);
+      padding: var(--spacing-lg); /* More internal padding */
+      overflow-y: auto;
+      transform: translateX(100%);
+      transition: transform var(--transition-slow);
+      z-index: 999;
+      box-shadow: var(--shadow-accent-heavy);
+      border-left: var(--border-glass); /* Consistent glass border */
+      border-right: var(--border-glass);
+    }
+
+    #gamePanel { right: 0; }
+    #softwarePanel { left: 0; transform: translateX(-100%); }
+
+    .slide-panel.open#gamePanel { transform: translateX(0); }
+    .slide-panel.open#softwarePanel { transform: translateX(0); }
+
+    .close-panel {
+      position: sticky; /* Make close button stick to top */
+      top: var(--spacing-md);
+      left: calc(100% - 40px); /* Adjust position based on button size */
+      font-size: 1.8rem; /* Larger close icon */
+      background: var(--accent-color);
+      color: black;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 101; /* Above panel content */
+      transition: background-color var(--transition-fast), transform var(--transition-fast);
+      border: none;
+      box-shadow: var(--shadow-accent-light);
+    }
+
+    .close-panel:hover {
+      background-color: var(--accent-hover);
+      transform: scale(1.1) rotate(90deg); /* Spin on hover */
+    }
+
+    .panel-content {
+      margin-top: var(--spacing-xl);
+      padding-top: var(--spacing-sm); /* Account for sticky button */
+    }
+
+    .app-card, .game-card {
+      background: var(--glass-bg-dark);
+      padding: var(--spacing-md);
+      margin-bottom: var(--spacing-md);
+      border-radius: 12px;
+      box-shadow: var(--shadow-accent-medium);
+      text-align: left;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+      border: 1px solid rgba(0, 255, 255, 0.2); /* Subtle card border */
+    }
+
+    .app-card:hover, .game-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px var(--accent-glow);
+      background: rgba(0, 255, 255, 0.05); /* Lighter glass on hover */
+    }
+
+    .app-card h3, .game-card h3 {
+      color: var(--accent-color);
+      margin-bottom: 8px;
+      font-size: var(--font-size-lg);
+    }
+
+    .app-card p, .game-card p {
+      font-size: var(--font-size-sm);
+      margin-bottom: 12px;
+    }
+
+    /* Video player container within cards */
+    .card-video-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      margin-bottom: var(--spacing-md);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid rgba(0, 255, 255, 0.3);
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+      background-color: #000; /* Ensures black background while loading */
+    }
+
+    .card-video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+
+    .app-card a, .game-card a {
+      background: var(--accent-color);
+      padding: 8px 16px; /* Larger button */
+      border-radius: 8px; /* More rounded */
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.3); /* Button glow */
+    }
+
+    .app-card a:hover, .game-card a:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 0 15px var(--accent-glow-strong);
+    }
+
+    /* Info Section */
+    .info-section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-md);
+      max-width: 960px;
+      margin: 0 auto var(--spacing-lg);
+    }
+
+    .info-box {
+      background: var(--dark-panel-bg);
+      padding: var(--spacing-md);
+      border-radius: 16px; /* More rounded */
+      box-shadow: var(--shadow-accent-medium);
+      transition: transform var(--transition-medium), box-shadow var(--transition-medium), background var(--transition-medium);
+      border: 1px solid rgba(0, 255, 255, 0.15); /* Subtle border */
+      text-align: center; /* Ensure contents are centered */
+    }
+
+    .info-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 30px var(--accent-glow);
+      background: #222; /* Slightly lighter on hover */
+    }
+    
+    /* NEW WELCOME IMAGE STYLE */
+    .welcome-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        margin-top: 0; 
+        margin-bottom: var(--spacing-md);
+        border: 4px solid var(--accent-color);
+        box-shadow: 0 0 20px var(--accent-glow);
+        transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        display: block; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .welcome-image:hover {
+        transform: scale(1.01);
+        box-shadow: 0 0 35px var(--accent-glow-strong);
+        border-color: var(--accent-hover);
+    }
+
+    /* Social Buttons - Now inside extra-box */
+    .social-links {
+        padding: var(--spacing-md); /* Add padding to the whole block */
+        border-radius: 16px; /* Match other blocks */
+        background: var(--glass-bg-light); /* Match extra-box style */
+        backdrop-filter: blur(10px);
+        box-shadow: var(--shadow-accent-medium);
+        transition: transform var(--transition-medium), box-shadow var(--transition-medium), background var(--transition-medium);
+        border: var(--border-glass); /* Consistent glass border */
+        color: #ccc;
+    }
+    .social-links:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 0 25px var(--accent-glow);
+        background: rgba(0, 255, 255, 0.08);
+    }
+
+    .social-links h2 {
+        margin-top: 0; /* Adjust margin as it's now in a box */
+        margin-bottom: var(--spacing-md);
+        text-align: center;
+    }
+
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-lg); /* More space between buttons */
+      flex-wrap: wrap;
+      margin-bottom: 0; /* No external margin needed here */
+    }
+
+    .social-btn {
+      width: 70px; /* Larger social buttons */
+      height: 70px;
+      border-radius: 50%;
+      background-color: var(--accent-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #000;
+      font-size: 1.8rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+      box-shadow: var(--shadow-accent-medium);
+    }
+
+    .social-btn:hover {
+      background-color: var(--accent-hover);
+      transform: scale(1.2) rotate(10deg); /* More dynamic hover */
+      box-shadow: 0 0 30px var(--accent-glow-strong);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* Extra Blocks */
+    .extra-blocks {
+      max-width: 960px;
+      margin: var(--spacing-xl) auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--spacing-md);
+    }
+
+    .extra-box {
+      background: var(--glass-bg-light);
+      padding: var(--spacing-md);
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow-accent-medium);
+      transition: transform var(--transition-medium), box-shadow var(--transition-medium), background var(--transition-medium);
+      border: var(--border-glass); /* Consistent glass border */
+      color: #ccc; /* Slightly dimmer text */
+      text-align: center; /* Default text alignment */
+    }
+
+    .extra-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px var(--accent-glow);
+      background: rgba(0, 255, 255, 0.08); /* Lighter glass on hover */
+    }
+
+    /* --- NEW/UPDATED CSS for Extra Block 1 (Members) --- */
+    .extra-box-members {
+        text-align: left;
+    }
+
+    .extra-box-members h3 {
+        text-align: center;
+        margin-bottom: var(--spacing-md);
+        font-size: var(--font-size-lg);
+        color: var(--text-color);
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+    }
+
+    .member-card {
+        padding: var(--spacing-sm) 0;
+        margin-bottom: var(--spacing-md);
+        border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+    }
+
+    .member-card:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .member-name {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: gold; /* Golden color */
+        text-shadow: 0 0 8px rgba(255, 215, 0, 0.8), 0 0 3px rgba(0, 0, 0, 0.9); /* Golden texture/shadow */
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .member-role {
+        font-size: 0.9rem;
+        color: #fff;
+        display: block;
+        padding: 4px 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 500;
+        /* Animation for Role Highlight */
+        animation: role-glow 2s infinite alternate ease-in-out;
+    }
+
+    @keyframes role-glow {
+        0% { color: #fff; text-shadow: 0 0 2px rgba(255, 255, 255, 0.1); }
+        100% { color: var(--accent-color); text-shadow: 0 0 8px var(--accent-glow); }
+    }
+
+    .member-link-btn {
+        background: var(--accent-color);
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 8px;
+        font-size: 0.8rem;
+        transition: background-color var(--transition-fast), transform var(--transition-fast);
+        box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+    }
+
+    .member-link-btn:hover {
+        background-color: var(--accent-hover);
+        transform: scale(1.05);
+        text-decoration: none;
+    }
+    /* --- END NEW/UPDATED CSS for Extra Block 1 --- */
+
+
+    /* News & Updates Block */
+    .news-updates-block {
+      background: var(--dark-panel-bg);
+      padding: var(--spacing-md);
+      border-radius: 16px;
+      box-shadow: var(--shadow-accent-medium);
+      border: 1px solid rgba(0, 255, 255, 0.15);
+      text-align: left;
+    }
+
+    .news-updates-block h3 {
+        color: var(--accent-color);
+        margin-bottom: var(--spacing-md);
+        text-align: center;
+    }
+
+    .news-item {
+        margin-bottom: var(--spacing-sm);
+        padding-bottom: var(--spacing-sm);
+        border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+    }
+
+    .news-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .news-item .date {
+        font-size: 0.8em;
+        color: #888;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .news-item p {
+        font-size: 0.9em;
+        color: var(--text-color);
+    }
+
+    .news-item a {
+        font-size: 0.9em;
+        color: var(--accent-color);
+        text-decoration: underline;
+    }
+
+    .news-item a:hover {
+        color: var(--accent-hover);
+    }
+    
+    /* --- NEW CSS for Upcoming Trailer Block (Replaces Download Stats Block) --- */
+    .upcoming-trailer-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .upcoming-trailer-block h3 {
+        color: var(--accent-color);
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.4); /* Cyan glow */
+        margin-bottom: var(--spacing-md);
+    }
+
+    /* Video player container inside the extra block */
+    .trailer-video-container {
+      position: relative;
+      width: 100%;
+      /* Adjust padding to control the aspect ratio/size within the grid item */
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */ 
+      margin-bottom: var(--spacing-md);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 3px solid var(--accent-color); /* Strong border */
+      box-shadow: var(--shadow-accent-medium); /* Strong glow */
+      background-color: #000;
+      transition: box-shadow var(--transition-medium);
+    }
+
+    .trailer-video-container:hover {
+        box-shadow: 0 0 30px var(--accent-glow-strong);
+    }
+
+    .trailer-video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .trailer-note {
+        font-size: 0.8rem;
+        color: #bbb;
+        margin-top: var(--spacing-sm);
+        font-style: italic;
+    }
+    /* --- END NEW CSS for Upcoming Trailer Block --- */
+
+    /* FAQ Block */
+    .faq-block {
+        text-align: left;
+    }
+    .faq-item {
+        margin-bottom: var(--spacing-sm);
+        border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+        padding-bottom: var(--spacing-sm);
+    }
+    .faq-item:last-child {
+        border-bottom: none;
+    }
+    .faq-question {
+        font-weight: bold;
+        color: var(--accent-color);
+        cursor: pointer;
+        padding: 5px 0;
+        transition: color var(--transition-fast);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .faq-question:hover {
+        color: var(--accent-hover);
+    }
+    .faq-answer {
+        font-size: var(--font-size-sm);
+        padding-top: 5px;
+        color: #bbb;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+        opacity: 0;
+    }
+    .faq-answer.open {
+        max-height: 150px; /* Adjust based on expected max content */
+        opacity: 1;
+    }
+    .faq-icon {
+        transition: transform 0.3s ease-out;
+    }
+    .faq-question[aria-expanded="true"] .faq-icon {
+        transform: rotate(45deg);
+    }
+
+    /* Media Mention Block (using an image) */
+    .media-mention-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .media-mention-block img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: var(--spacing-md);
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    }
+    .media-mention-block p {
+        font-style: italic;
+        color: #fff;
+    }
+
+    /* Testimonial Block */
+    .testimonial-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .testimonial-quote {
+        font-size: var(--font-size-lg);
+        font-style: italic;
+        color: #fff;
+        margin-bottom: var(--spacing-md);
+        position: relative;
+        padding: 0 var(--spacing-sm);
+    }
+    .testimonial-quote::before, .testimonial-quote::after {
+        content: '“';
+        font-size: 3rem;
+        line-height: 0;
+        color: gold;
+        position: absolute;
+        opacity: 0.7;
+    }
+    .testimonial-quote::before {
+        content: '“';
+        top: 0.5rem;
+        left: 0;
+    }
+    .testimonial-quote::after {
+        content: '”';
+        bottom: 1.5rem;
+        right: 0;
+    }
+    .testimonial-author {
+        font-weight: bold;
+        color: var(--accent-color);
+        font-size: var(--font-size-base);
+        margin-top: var(--spacing-sm);
+        text-align: right;
+    }
+    
+    
+    /* Footer */
+    footer {
+      margin-top: var(--spacing-xl);
+      font-size: var(--font-size-sm);
+      color: #888;
+      padding: var(--spacing-sm);
+    }
+
+    .footer-buttons {
+        margin-top: var(--spacing-md);
+        display: flex;
+        justify-content: center;
+        gap: var(--spacing-md);
+        flex-wrap: wrap;
+        margin-bottom: var(--spacing-md);
+    }
+
+    /* Popup Windows (General Styles) */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8); /* Darker overlay */
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      padding: var(--spacing-md);
+      animation: fadeIn 0.3s forwards;
+      overflow-y: auto;
+    }
+
+    .popup-content {
+      background: rgba(255,255,255,0.08); /* Lighter glass for popups */
+      backdrop-filter: blur(20px); /* Stronger blur for popups */
+      padding: var(--spacing-xl); /* More padding */
+      border-radius: 20px; /* More rounded */
+      max-width: 650px; /* Wider popup */
+      width: 90%;
+      color: var(--text-color);
+      text-align: left;
+      box-shadow: 0 0 25px var(--accent-glow-strong);
+      position: relative;
+      border: 2px solid var(--accent-color); /* Stronger border for popups */
+      animation: slideInFromTop 0.4s ease-out forwards;
+      max-height: 90vh; 
+      overflow-y: auto; 
+      -webkit-overflow-scrolling: touch; 
+    }
+
+    /* Optional: Style scrollbar for Webkit browsers */
+    .popup-content::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .popup-content::-webkit-scrollbar-track {
+        background: rgba(0, 255, 255, 0.1);
+        border-radius: 10px;
+    }
+
+    .popup-content::-webkit-scrollbar-thumb {
+        background-color: var(--accent-color);
+        border-radius: 10px;
+        border: 2px solid rgba(0, 255, 255, 0.2);
+    }
+
+    .popup-content h2 {
+      color: var(--accent-color);
+      margin-bottom: var(--spacing-lg); /* More space */
+      text-align: center;
+      font-size: var(--font-size-xl);
+      text-shadow: var(--shadow-accent-light);
+    }
+
+    .popup-content p {
+      margin: var(--spacing-sm) 0;
+      font-size: var(--font-size-base);
+    }
+
+    .popup-content a {
+      color: var(--accent-color);
+      text-decoration: underline;
+    }
+
+    .popup-content a:hover {
+      color: var(--accent-hover);
+      text-decoration: none;
+      text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    }
+
+    .popup-content .contact-section { /* Added class for new contact sections */
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .popup-content .contact-section h3 {
+        color: var(--text-color); /* Slightly different color for subheadings */
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--spacing-sm);
+        text-align: left; /* Align contact info to left */
+    }
+
+    .popup-content .contact-section p {
+        margin-bottom: 5px; /* Smaller margin for list items */
+        text-align: left;
+    }
+    
+    .popup-close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 2rem;
+        color: var(--text-color);
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        line-height: 1;
+        transition: color 0.2s, transform 0.2s;
+    }
+
+    .popup-close-btn:hover {
+        color: var(--accent-hover);
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    .popup-button {
+      background: var(--accent-color);
+      border: none;
+      padding: 12px 25px; /* Larger buttons */
+      border-radius: 10px; /* More rounded */
+      font-weight: bold;
+      cursor: pointer;
+      color: black;
+      transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    }
+
+    .popup-button:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px var(--accent-glow-strong);
+    }
+
+    .popup-continue-btn, .popup-close-contact-btn {
+        display: block;
+        margin: var(--spacing-lg) auto 0; /* More margin */
+    }
+
+    /* --- ROYAL POPUP STYLES --- */
+    #partnersPopup .popup-content {
+        background: #1e1e1e; /* Darker royal background */
+        border: 4px double var(--royal-gold); /* Double gold border */
+        box-shadow: 0 0 30px var(--royal-glow), inset 0 0 10px rgba(0, 0, 0, 0.5); /* Strong gold glow */
+        padding: var(--spacing-xl);
+        color: var(--text-color);
+        text-align: center;
+    }
+
+    #partnersPopup h2 {
+        color: var(--royal-gold);
+        text-shadow: 0 0 15px var(--royal-glow);
+        font-size: 3rem; /* Larger royal title */
+        margin-bottom: var(--spacing-lg);
+        position: relative;
+        font-family: 'Times New Roman', serif; /* Classic font for royal feel */
+    }
+    
+    #partnersPopup h2::before, #partnersPopup h2::after {
+        content: "⚜"; /* Fleur-de-lis or similar royal icon */
+        color: var(--royal-gold);
+        font-size: 1.5rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #partnersPopup h2::before { left: 10px; }
+    #partnersPopup h2::after { right: 10px; }
+
+    .partner-card-royal {
+        background: var(--royal-red); /* Royal red background */
+        border: 3px solid var(--royal-gold);
+        border-radius: 10px;
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+        transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        text-align: left;
+    }
+    
+    .partner-card-royal:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 0 25px var(--royal-glow);
+        background: #9a0000; /* Slightly lighter red on hover */
+    }
+    
+    .partner-card-royal h3 {
+        color: var(--royal-gold);
+        font-size: var(--font-size-lg);
+        margin-bottom: 5px;
+        text-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
+    }
+    
+    .partner-card-royal p {
+        color: #fff;
+        margin-bottom: 10px;
+        font-size: var(--font-size-base);
+    }
+
+    .partner-card-royal a {
+        background: var(--royal-gold);
+        padding: 8px 16px;
+        border-radius: 8px;
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color var(--transition-fast), transform var(--transition-fast);
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+    
+    .partner-card-royal a:hover {
+        background-color: #e6c200;
+        transform: translateY(-2px);
+        text-decoration: none;
+    }
+    
+    /* --- END ROYAL POPUP STYLES --- */
+
+    /* --- CROCHET HUB POPUP STYLES (New/Re-added) --- */
+    
+    #crochetPopup .popup-content {
+      max-width: 1100px; /* Wider for the grid layout */
+      width: 95%; 
+      padding: var(--spacing-lg) var(--spacing-xl);
+      background: var(--dark-panel-bg);
+      border-radius: 20px;
+      box-shadow: 0 0 50px rgba(0, 255, 255, 0.2);
+      text-align: center;
+      border: 3px solid var(--yarn-accent);
+      position: relative;
+    }
+    
+    #crochetPopup .hub-title {
+        font-size: var(--font-size-heading);
+        color: var(--yarn-accent); /* Crochet title uses the warm accent */
+        text-shadow: 0 0 15px var(--yarn-glow), 0 0 5px rgba(0, 255, 255, 0.1);
+        margin-top: var(--spacing-lg);
+        margin-bottom: var(--spacing-md);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    
+    .crochet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-lg);
+      margin-top: var(--spacing-lg);
+      padding-bottom: var(--spacing-lg);
+    }
+
+    .crochet-card {
+      background: var(--glass-bg-dark);
+      padding: var(--spacing-md);
+      border-radius: 15px;
+      border: 1px solid rgba(255, 140, 0, 0.3);
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+      transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+      text-align: left;
+      overflow: hidden;
+    }
+
+    .crochet-card:hover {
+      transform: translateY(-5px); 
+      box-shadow: 0 0 25px var(--yarn-glow);
+    }
+
+    .crochet-card h3 {
+      color: var(--yarn-accent);
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .crochet-card p {
+        font-size: 0.95rem;
+        color: var(--yarn-text);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .crochet-card .video-container {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        margin-bottom: var(--spacing-sm);
+        border-radius: 8px;
+        overflow: hidden;
+        border: 2px solid var(--yarn-accent);
+        box-shadow: 0 0 12px var(--yarn-glow);
+        background-color: #000;
+    }
+
+    .crochet-card .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .crochet-card-actions {
+        display: flex;
+        gap: var(--spacing-sm);
+        flex-wrap: wrap;
+        margin-top: var(--spacing-sm);
+    }
+
+    .crochet-card a {
+        background: var(--yarn-accent);
+        padding: 10px 18px;
+        border-radius: 8px;
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+        box-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+        flex-grow: 1; 
+        text-align: center;
+    }
+
+    .crochet-card a:hover {
+        background-color: #ffaa33;
+        transform: translateY(-2px);
+        box-shadow: 0 0 20px var(--yarn-glow);
+        text-decoration: none;
+    }
+    
+    /* --- END CROCHET HUB POPUP STYLES --- */
+
+
+    /* Keyframe Animations */
+    @keyframes pulsate {
+      0% { box-shadow: var(--shadow-accent-medium); }
+      50% { box-shadow: 0 0 25px var(--accent-glow-strong); }
+      100% { box-shadow: var(--shadow-accent-medium); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideInFromTop {
+      from { transform: translateY(-50px) scale(0.9); opacity: 0; }
+      to { transform: translateY(0) scale(1); opacity: 1; }
+    }
+
+
+    /* --- NEW CSS FOR SEARCH BAR --- */
+    .search-bar-container {
+        display: flex;
+        gap: 10px;
+        margin-bottom: var(--spacing-md);
+        background: var(--glass-bg-dark);
+        border-radius: 12px;
+        padding: 8px 12px;
+        border: 1px solid rgba(0, 255, 255, 0.3);
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+        transition: box-shadow var(--transition-medium);
+    }
+
+    .search-bar-container:focus-within {
+        box-shadow: 0 0 20px var(--accent-glow-strong);
+    }
+
+    .search-bar-container input[type="text"] {
+        flex-grow: 1;
+        padding: 10px 15px;
+        border: none;
+        background: transparent;
+        color: var(--text-color);
+        font-size: var(--font-size-base);
+        outline: none;
+        border-radius: 8px;
+        transition: background-color var(--transition-fast);
+    }
+
+    .search-bar-container input[type="text"]::placeholder {
+        color: rgba(224, 224, 224, 0.6);
+    }
+
+    .search-bar-container input[type="text"]:focus {
+        background-color: rgba(0, 255, 255, 0.05);
+    }
+
+    .search-bar-container button {
+        background: var(--accent-color);
+        color: black;
+        border: none;
+        padding: 10px 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: var(--font-size-base);
+        transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+        box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+    }
+
+    .search-bar-container button:hover {
+        background-color: var(--accent-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 0 15px var(--accent-glow-strong);
+    }
+
+    /* --- NEW CSS for Instagram Follow Block --- */
+    .instagram-follow-block {
+        text-align: center;
+        /* Inherits styles from .extra-box */
+    }
+
+    .instagram-follow-block h3 {
+        color: var(--accent-color);
+        margin-bottom: var(--spacing-sm);
+        text-shadow: 0 0 5px rgba(255, 140, 0, 0.5); /* A slight orange/cyan mix glow */
+    }
+
+    .instagram-follow-block img.instagram-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        margin-top: var(--spacing-sm);
+        border: 4px solid var(--accent-color);
+        box-shadow: 0 0 20px var(--accent-glow);
+        transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    }
+
+    .instagram-follow-block img.instagram-image:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 35px var(--accent-glow-strong);
+        border-color: var(--accent-hover);
+    }
+    .instagram-follow-block p {
+        font-size: 0.85rem;
+        color: #bbb;
+        margin-top: var(--spacing-sm);
+    }
+
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      .tagline {
+        font-size: 1rem;
+      }
+      .top-logo-video {
+        width: 120px;
+        height: 120px;
+      }
+      .count-circle {
+        width: 90px;
+        height: 90px;
+      }
+      .count-circle .number {
+        font-size: 1.8rem;
+      }
+      .count-circle .label {
+        font-size: 0.7rem;
+      }
+      .info-section {
+        padding: 0 var(--spacing-sm);
+      }
+      .slide-panel {
+        width: 90%;
+      }
+      .popup-content {
+          padding: var(--spacing-md);
+          width: 95%;
+          max-height: 85vh; /* Adjust for smaller screens */
+      }
+      /* Adjust crochet hub popup for smaller screens */
+      #crochetPopup .popup-content {
+          padding: var(--spacing-md);
+      }
+      .crochet-grid {
+          grid-template-columns: 1fr;
+          gap: var(--spacing-md);
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: var(--spacing-sm);
+        background-size: 40px 40px; /* Smaller pattern */
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      .tagline {
+          font-size: 0.9rem;
+      }
+      .top-logo-video {
+        width: 100px;
+        height: 100px;
+      }
+      .count-overlay {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-sm);
+        top: auto;
+        bottom: var(--spacing-sm);
+      }
+      .count-circle {
+        width: 75px;
+        height: 75px;
+      }
+      .count-circle .number {
+        font-size: 1.4rem;
+      }
+      .count-circle .label {
+        font-size: 0.6rem;
+      }
+      .panel-btn {
+        top: auto;
+        bottom: var(--spacing-sm);
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+      }
+      .slide-panel {
+        width: 100%;
+        border-radius: 0;
+      }
+      .popup-content {
+        border-radius: 0;
+        padding: var(--spacing-md);
+        max-height: 80vh; /* Further adjust for very small screens */
+      }
+      .extra-blocks {
+          grid-template-columns: 1fr;
+      }
+      .footer-buttons {
+          flex-direction: column;
+      }
+      .search-bar-container {
+          flex-direction: column;
+          align-items: stretch;
+      }
+      .search-bar-container button {
+          width: 100%;
+      }
+      /* Adjust testimonial quote for small screens */
+      .testimonial-quote::before {
+          font-size: 2rem;
+          top: 0.2rem;
+      }
+      .testimonial-quote::after {
+          font-size: 2rem;
+          bottom: 0.5rem;
+      }
+      /* Adjust partners popup for small screens */
+      #partnersPopup h2 {
+          font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-logo-video">
+      <iframe frameborder="0" allowfullscreen scrolling="no" allow="autoplay;fullscreen" src="https://onelineplayer.com/player.html?autoplay=true&autopause=false&muted=true&loop=true&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fgwa0r1p4vch7fn9eimmh2%2Fkm_20250628_1440p_60f_20250628_072335.mp4%3Frlkey%3Do63qbh95xykyijmjsa2znwx33%26st%3Drqena374%26raw%3D1&poster=&time=false&progressBar=false&overlay=true&muteButton=true&fullscreenButton=false&style=light&quality=auto&playButton=false" title="VK INTERACTIVES Logo Animation"></iframe>
+    </div>
+    <h1>VK INTERACTIVES</h1>
+    <p class="tagline">Get everything from VK on this page</p>
+  </header>
+
+  <main>
+    <section class="hero-video-section">
+      <div class="count-overlay">
+        <div class="count-circle"><div class="number" id="gamesCount">0</div><div class="label">GAMES</div></div>
+        <div class="count-circle"><div class="number" id="appsCount">0</div><div class="label">SOFTWARE</div></div>
+      </div>
+      <iframe frameborder="0" allowfullscreen scrolling="no" allow="autoplay;fullscreen" src="https://onelineplayer.com/player.html?autoplay=true&autopause=false&muted=true&loop=true&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Ftc1hd1ba5b916pcwcf4i7%2Fkm_20251117_1080p_60f_20251117_231148.mp4%3Frlkey%3Dq37w8gr1o3lj988nvupcryy1l%26st%3DlUnb7dcw%26raw%3D1&overlay=true&muteButton=true&fullscreenButton=false&style=light&quality=auto&playButton=false" title="Main Promotional Video"></iframe>
+
+      <button class="panel-btn" id="gameBtn" aria-label="Open Games Panel">🎮</button>
+      <button class="panel-btn" id="softwareBtn" aria-label="Open Software Panel">💻</button>
+    </section>
+
+    <aside class="slide-panel" id="gamePanel">
+      <button class="close-panel" onclick="closePanel('gamePanel')" aria-label="Close Games Panel">></button>
+      <h2>My Games</h2>
+      <div class="search-bar-container">
+        <input type="text" id="gameSearchInput" placeholder="Search games...">
+      </div>
+      <div id="gamePanelContent" class="panel-content">
+        </div>
+    </aside>
+
+    <aside class="slide-panel" id="softwarePanel">
+      <button class="close-panel" onclick="closePanel('softwarePanel')" aria-label="Close Software Panel"><</button>
+      <h2>My Software</h2>
+      <div class="search-bar-container">
+        <input type="text" id="softwareSearchInput" placeholder="Search software...">
+      </div>
+      <div id="softwarePanelContent" class="panel-content">
+        </div>
+    </aside>
+
+    <section class="info-section">
+      <div class="info-box">
+        <h2>About Me</h2>
+        <img src="Https://www.dropbox.com/scl/fi/0vi4v0998346w6ugrf6ss/20251209_000545.jpg?rlkey=anofmhlgwu68ytlyua6eu6xoq&st=v72p0fcm&dl=1" alt="Welcome to VK INTERACTIVES" class="welcome-image">
+        
+        <p>
+          I’m **VK**, i create 2d,3d, game's and software's creative tools and games that bring fun, emotion, and innovation into every click.
+        </p>
+        <p>
+          **VK INTERACTIVES – Official Digital Hub**
+        </p>
+        <p>
+          VK INTERACTIVES is the official digital platform for discovering original applications and 2D games developed by VK. This site serves as a centralized hub for publishing quality, user-focused mobile solutions designed to enhance everyday digital experiences.
+        </p>
+        <p>
+          With a focus on innovation, performance, and user accessibility, VK INTERACTIVES showcases a growing portfolio of functional tools, creative games, and experimental projects—built from the ground up with a dedication to simplicity and impact.
+        </p>
+        <p>
+          **Follow us on Instagram** for the latest updates, sneak peeks, and behind-the-scenes content!
+        </p>
+      </div>
+      <div class="info-box">
+        <h2>My Projects</h2>
+        <p>Explore titles like **CyberFun2D, FLAMES, Mood Tracker, Motivateme, M&M,** and my dream game: **To the Life**.</p>
+      </div>
+    </section>
+
+    <section class="extra-blocks">
+      <div class="extra-box extra-box-members">
+        <h3>MEMBER'S/SUPPORTERS</h3>
+        <div class="member-card">
+            <span class="member-name">VK VINITH - Founder</span>
+            <span class="member-role">Role: Development, Modeling, Content creation</span>
+            <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=ytp3nz5" target="_blank" rel="noopener noreferrer" class="member-link-btn">Visit Instagram</a>
+        </div>
+        <div class="member-card">
+            <span class="member-name">VISHAL JOSHUA</span>
+            <span class="member-role">Role: Advertising & development</span>
+            <a href="https://www.instagram.com/the_hyper_black__?igsh=MTNhc3J2bB2bnpjNw==" target="_blank" rel="noopener noreferrer" class="member-link-btn">Visit Instagram</a>
+        </div>
+        <div class="member-card">
+            <span class="member-name">UDHAYAN - Sponsor</span>
+            <span class="member-role">Role: Sponsor, Development & Content creator</span>
+            <a href="https://www.instagram.com/_dxrk._wxrld?igsh=MTViYWpqZmgyYnc5ag==" target="_blank" rel="noopener noreferrer" class="member-link-btn">Visit Instagram</a>
+        </div>
+        <div class="member-card">
+            <span class="member-name">LOGESH - Sponsor</span>
+            <span class="member-role">Role: Sponsor, Content creator, Development</span>
+            <a href="https://www.instagram.com/im_lowgzz_yt_?igsh=dWptenp0bTRvdTNu" target="_blank" rel="noopener noreferrer" class="member-link-btn">Visit Instagram</a>
+        </div>
+        <div class="member-card">
+            <span class="member-name">EKA WAHYUNI</span>
+            <span class="member-role">Role: Content creation & Testing</span>
+            <a href="https://www.instagram.com/itsmeeka66?igsh=dmZjYXNhZHZvbXRu" target="_blank" rel="noopener noreferrer" class="member-link-btn">Visit Instagram</a>
+        </div>
+      </div>
+
+      <div class="extra-box news-updates-block">
+        <h3>News & Updates</h3>
+        <div class="news-item">
+            <span class="date">Oct 28, 2025</span>
+            <p>**Motivateme** released! Get your daily dose of inspiration and fire quotes.</p>
+            <a href="https://www.mediafire.com/file/jwfbux6usyyyzgy/Motivate.me.apk/file" target="_blank" rel="noopener noreferrer">Download Now</a>
+        </div>
+        <div class="news-item">
+            <span class="date">July 28, 2025</span>
+            <p>**Mood Tracker** released! Start monitoring your emotional well-being today.</p>
+            <a href="https://www.mediafire.com/file/nm5bb07w513f2no/MOOD_TRACKER.apk/file" target="_blank" rel="noopener noreferrer">Download Now</a>
+        </div>
+        <div class="news-item">
+            <span class="date">June 28, 2025</span>
+            <p>New update for **To the Life** is now live! Check out the improved crafting system.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="news-item">
+            <span class="date">June 15, 2025</span>
+            <p>**M&M v1.0** released with new UI enhancements and performance optimizations.</p>
+            <a href="https://www.mediafire.com/file/22z4yjs90a6915v/M%2526M%2528Mood_and_motivation%2529.apk/file" target="_blank" rel="noopener noreferrer">Download M&M</a>
+        </div>
+      </div>
+
+      <div class="extra-box faq-block">
+        <h3>❓ Frequently Asked Questions</h3>
+        <div class="faq-item">
+            <div class="faq-question" role="button" aria-expanded="false" aria-controls="faq-ans-1" onclick="toggleFaq(this)">
+                What engine do you use for game development? <span class="faq-icon">+</span>
+            </div>
+            <p class="faq-answer" id="faq-ans-1">I primarily use **Unity** for 2D and 3D game development, which allows for versatile cross-platform deployment. My software/app projects often use native Android (Java/Kotlin) or Flutter.</p>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" role="button" aria-expanded="false" aria-controls="faq-ans-2" onclick="toggleFaq(this)">
+                Are your software projects open source? <span class="faq-icon">+</span>
+            </div>
+            <p class="faq-answer" id="faq-ans-2">Currently, most of my projects are closed source. However, I sometimes release small utility tools or experimental features on platforms like GitHub. Keep an eye on my social media for updates!</p>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" role="button" aria-expanded="false" aria-controls="faq-ans-3" onclick="toggleFaq(this)">
+                How can I report a bug? <span class="faq-icon">+</span>
+            </div>
+            <p class="faq-answer" id="faq-ans-3">The best way to report a bug is by sending a detailed email to my contact address: **contactvkdev@gmail.com**. Please include the app name, your device, and steps to reproduce the issue.</p>
+        </div>
+      </div>
+
+      <div class="extra-box media-mention-block">
+        <h3>✨ Fan Appreciation</h3>
+        <img src="1000053471.png" alt="Fan-made artwork for VK Games" title="Fan-made artwork for VK Games">
+        <p>Huge thanks to our community for the awesome fan art and support! Your creativity fuels the next project.</p>
+      </div>
+
+      <div class="extra-box testimonial-block">
+        <h3>⭐ Mission Statement</h3>
+        <p class="testimonial-quote">
+            Where Every Journey Holds a Secret. My goal is to build the software that helps you find it, and the games that let you explore it.
+        </p>
+        <div class="testimonial-author">— VK, Founder of VK INTERACTIVES</div>
+      </div>
+
+      <div class="extra-box upcoming-trailer-block">
+        <h3>🚀 Upcoming Trailer</h3>
+        <div class="trailer-video-container">
+            <iframe frameborder="0" allowfullscreen scrolling="no" allow="autoplay;fullscreen" 
+                    src="https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=true&loop=false&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fpmdmce0thctd644wq96xk%2Fshorts-vtuber.mp4%3Frlkey%3D57sbw59ndzxeiz2wch2xqevy1%26st%3Db1o80xu4%26raw%3D1&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto&playButton=true" 
+                    title="Upcoming Project Trailer">
+            </iframe>
+        </div>
+        <p class="trailer-note">Check back soon for the official launch date and full trailer release!</p>
+      </div>
+
+      <div class="extra-box instagram-follow-block">
+        <h3>📸 Follow VK INTERACTIVES</h3>
+        <a href="https://www.instagram.com/vk_games_softwares" target="_blank" rel="noopener noreferrer" aria-label="Follow VK INTERACTIVES on Instagram">
+            <img src="Https://www.dropbox.com/scl/fi/mpxkidy98er518bdlos99/20251209_004015.jpg?rlkey=kru78w58of2g3khgqz06zgkjj&st=5thqovg8&dl=1" alt="Instagram Follow Banner" class="instagram-image">
+        </a>
+        <p>Tap the image to see our latest posts and stories!</p>
+      </div>
+      <div class="social-links extra-box">
+        <h2>Connect With Me</h2>
+        <div class="social-buttons">
+          <a href="https://youtube.com/@playwithvk2025?si=aUioHf5_MI4VejDP" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube"><span class="sr-only">YouTube</span>YT</a>
+          <a href="https://www.instagram.com/vk_games_softwares" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><span class="sr-only">Instagram</span>IG</a>
+          <a href="#" class="social-btn" aria-label="X (Twitter)"><span class="sr-only">X</span>X</a>
+          <a href="#" class="social-btn" aria-label="Discord"><span class="sr-only">Discord</span>DS</a>
+        </div>
+      </div>
+
+      </section>
+      
+  </main>
+
+  <footer>© VK INTERACTIVES 2024–2025</footer>
+
+  <div class="footer-buttons">
+    <button id="showCrochetBtn" class="popup-button">🧶 Crochet Hub</button>
+    <button id="showPartnersBtn" class="popup-button">Top Publishers & Partners</button>
+    <button id="showPrivacyBtn" class="popup-button">View Privacy Policy</button>
+    <button id="showContactBtn" class="popup-button">Contact Me</button>
+  </div>
+  
+  <div id="crochetPopup" class="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="crochetPopupHeading">
+      <div class="popup-content">
+          <button class="popup-close-btn" onclick="closePopup('crochetPopup')" aria-label="Close Crochet Hub">×</button>
+          <h2 id="crochetPopupHeading" class="hub-title">VK INTERACTIVES YARNWORKS - The Crochet Hub</h2>
+          <p style="font-size:var(--font-size-lg); color:var(--yarn-text); margin-bottom:var(--spacing-lg);">
+              From complex **patterns** to beginner **tutorial videos**, dive into the digital threads of our crochet community.
+          </p>
+
+          <div class="crochet-grid" id="crochetContent">
+              </div>
+      </div>
+  </div>
+  <div id="privacyPopup" class="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="privacyPopupHeading">
+    <div class="popup-content">
+      <button class="popup-close-btn" onclick="closePopup('privacyPopup')" aria-label="Close Privacy Policy">×</button>
+      <h2 id="privacyPopupHeading">Privacy Policy</h2>
+      <p>
+        **Effective Date: July 1, 2025**<br>
+        **Website: VK INTERACTIVES Hub**<br>
+        **Owner: VK INTERACTIVES**
+      </p>
+      <p>
+        At **VK INTERACTIVES**, we are committed to respecting and protecting your privacy. This Privacy Policy describes how we collect, use, share, and protect information obtained through your interaction with our website and associated services, including access to downloadable content, game updates, and advertisements.
+      </p>
+      <p>
+        By accessing or using this website, you consent to the collection and use of information in accordance with this policy.
+      </p>
+
+      <h3>Information Collection</h3>
+      <p>
+        We collect both personal and non-personal information to ensure the proper functioning of the website and to enhance user experience. Information may be collected in the following ways:
+      </p>
+      <p>
+        **Voluntarily Provided Information:** This includes data you submit directly, such as your name, email address, or any other details provided through contact forms, support requests, or subscriptions.
+      </p>
+      <p>
+        **Automatically Collected Information:** We may collect data such as your IP address, device type, operating system, browser type, referral sources, pages visited, and general usage patterns through analytics tools and server logs.
+      </p>
+
+      <h3>Use of Information</h3>
+      <p>
+        The information collected is used for purposes including, but not limited to:
+      </p>
+      <ul>
+        <li>Delivering website content and services</li>
+        <li>Providing access to game files and updates</li>
+        <li>Responding to inquiries or support requests</li>
+        <li>Improving website performance, design, and security</li>
+        <li>Sending newsletters, product updates, or promotional communications, where consent has been given</li>
+        <li>Serving advertisements through third-party networks</li>
+      </ul>
+
+      <h3>Third-Party Advertising and Data Sharing</h3>
+      <p>
+        This website integrates advertisements from third-party advertising partners, including but not limited to Google AdMob, Start.io, and Unity Ads. These partners may collect and process personal and non-personal information about users, such as device identifiers, IP addresses, location data, and interactions with ads, to serve interest-based advertising and to monitor campaign performance.
+      </p>
+      <p>
+        Please be aware that by using this website or downloading games linked here, you acknowledge that certain data may be shared with these third-party advertising networks. VK INTERACTIVES does not control the data collection practices of these third parties and disclaims any responsibility for their handling of user information. We strongly encourage users to review the privacy policies of these advertising platforms before interacting with ads or providing consent.
+      </p>
+
+      <h3>External Links and Downloads</h3>
+      <p>
+        PLAY AT VK may include links to external platforms such as Google Drive, Mediafire, itch.io, the Google Play Store, or other file hosting services. These third-party sites operate independently and maintain their own privacy policies. VK INTERACTIVES is not responsible for the content, security, or data handling practices of any external sites.
+      </p>
+
+      <h3>Cookies and Tracking Technologies</h3>
+      <p>
+        We may use cookies and similar technologies to enhance website functionality, remember user preferences, and perform usage analysis. You have the option to control the use of cookies through your browser settings. Disabling cookies may impact certain features and functionality of the site.
+      </p>
+
+      <h3>Data Security</h3>
+      <p>
+        We implement commercially reasonable security measures to protect your data against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or method of electronic storage is completely secure. As such, we cannot guarantee absolute security.
+      </p>
+
+      <h3>Children’s Privacy</h3>
+      <p>
+        This website and the services provided are not intended for children under the age of 13. We do not knowingly collect personal data from children. If we become aware that personal information from a minor has been collected, we will take immediate steps to delete such information.
+      </p>
+
+      <h3>Policy Updates</h3>
+      <p>
+        We reserve the right to amend this Privacy Policy at any time. Updates will be posted on this page and will take effect upon publication. Continued use of the site after any changes are made constitutes your acceptance of the revised policy.
+      </p>
+
+      <h3>Contact</h3>
+      <p>
+        For any questions, concerns, or data-related requests, please contact:<br>
+        VK INTERACTIVES<br>
+        📧 Email: <a href="mailto:vksoftwares.help@gmail.com">vksoftwares.help@gmail.com</a>
+      </p>
+      <button onclick="closePopup('privacyPopup')" class="popup-button popup-continue-btn">Continue</button>
+    </div>
+  </div>
+
+  <div id="contactPopup" class="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="contactPopupHeading">
+    <div class="popup-content">
+      <button class="popup-close-btn" onclick="closePopup('contactPopup')" aria-label="Close Contact Form">×</button>
+      <h2 id="contactPopupHeading">Contact & Community</h2>
+      <p>
+        We’d love to hear from you. Whether you have a question, feedback, or a collaboration proposal — or just want to stay connected — you can reach us anytime through the options below.
+      </p>
+
+      <div class="contact-section">
+        <h3>📧 Email</h3>
+        <p>For support, feedback, or business inquiries:</p>
+        <p><a href="mailto:contactvkdev@gmail.com">contactvkdev@gmail.com</a></p>
+      </div>
+
+      <div class="contact-section">
+        <h3>📱 WhatsApp Group</h3>
+        <p>Join our official WhatsApp community for direct updates, sneak peeks, and open discussions with other players and the developer:</p>
+        <p>👉 <a href="#">Join WhatsApp Group</a></p>
+      </div>
+
+      <div class="contact-section">
+        <h3>📸 Instagram</h3>
+        <p>Follow us on Instagram to catch behind-the-scenes content, short clips, game teasers, and more:</p>
+        <p>👉 <a href="https://www.instagram.com/vk_games_softwares" target="_blank" rel="noopener noreferrer">Follow on Instagram</a></p>
+      </div>
+
+      <div class="contact-section">
+        <h3>🌐 Website</h3>
+        <p>The official digital hub for our projects (formerly PLAYATVK.com):</p>
+        <p><a href="https://playatvk.com" target="_blank" rel="noopener noreferrer">PLAYATVK.com</a></p>
+      </div>
+
+      <p>> Thank you for supporting **VK INTERACTIVES** — where games meet creativity.</p>
+
+      <button onclick="closePopup('contactPopup')" class="popup-button popup-close-contact-btn">Close</button>
+    </div>
+  </div>
+  
+  <div id="partnersPopup" class="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="partnersPopupHeading">
+    <div class="popup-content">
+      <button class="popup-close-btn" onclick="closePopup('partnersPopup')" aria-label="Close Partners List">×</button>
+      <h2 id="partnersPopupHeading">Top Publishers & Royal Allies</h2>
+      <p style="color: #ccc; margin-bottom: 30px;">
+          We extend our deepest gratitude to our strategic partners and top supporters who make our journey possible.
+      </p>
+
+      <div class="partner-card-royal">
+          <h3>👑 Solozard Games</h3>
+          <p>
+              **Role:** Key Publishing & Advertising Partner<br>
+              A leading mobile game publishing house providing invaluable support in marketing and platform distribution for select VK titles.
+          </p>
+          <a href="https://www.instagram.com/solozard_games?igsh=MWR5ZmhxOHdjdGYzeQ==" target="_blank" rel="noopener noreferrer">Visit Solozard Games</a>
+      </div>
+
+      <div class="partner-card-royal">
+          <h3>⭐ MediaFire</h3>
+          <p>
+              **Role:** Primary Download Host<br>
+              Reliable file hosting ensures all our APKs and game files are delivered quickly and securely across the globe.
+          </p>
+          <a href="https://www.mediafire.com/" target="_blank" rel="noopener noreferrer">Visit MediaFire</a>
+      </div>
+
+      <div class="partner-card-royal">
+          <h3>🤝 Udhayan & Logesh (Sponsors)</h3>
+          <p>
+              **Role:** Project Sponsorship & Content Support<br>
+              Instrumental in funding new creative ventures and providing early-stage content feedback.
+          </p>
+          <a href="#showContactBtn" onclick="closePopup('partnersPopup'); openPopup('contactPopup');" class="popup-button">Contact for Sponsorship</a>
+      </div>
+      
+      <p style="color: var(--royal-gold); margin-top: 30px; font-style: italic;">
+          Our allegiance to these partners ensures the continued growth and quality of all VK projects.
+      </p>
+
+      <button onclick="closePopup('partnersPopup')" class="popup-button popup-close-contact-btn">Acknowledge</button>
+    </div>
+  </div>
+  
+  <script>
+    // --- Data for dynamic content ---
+    const gamesData = [
+      {
+        title: "To the Life",
+        description: "An immersive open-world life simulator where every choice shapes your destiny. Explore vast landscapes, build relationships, and carve out your unique story.",
+        videoSrc: "https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=false&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fpmdmce0thctd644wq96xk%2Fshorts-vtuber.mp4%3Frlkey%3D57sbw59ndzxeiz2wch2xqevy1%26st%3Db1o80xu4%26raw%3D1&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto", // Example video URL
+        link: "#" // Replace with actual download/info link
+      },
+      {
+        title: "CyberFun2D",
+        description: "A fast-paced 2D platformer set in a neon-drenched cyberpunk city. Jump, dash, and hack your way through challenging levels.",
+        videoSrc: "https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=false&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fpmdmce0thctd644wq96xk%2Fshorts-vtuber.mp4%3Frlkey%3D57sbw59ndzxeiz2wch2xqevy1%26st%3Db1o80xu4%26raw%3D1&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto",
+        link: "#"
+      },
+      {
+        title: "FLAMES",
+        description: "A puzzle game that challenges your logic and spatial reasoning with fiery elements.",
+        videoSrc: "https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=false&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fpmdmce0thctd644wq96xk%2Fshorts-vtuber.mp4%3Frlkey%3D57sbw59ndzxeiz2wch2xqevy1%26st%3Db1o80xu4%26raw%3D1&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto",
+        link: "#"
+      },
+      {
+        title: "Game Title 4",
+        description: "Another exciting game to explore with unique features and engaging gameplay.",
+        videoSrc: "https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=false&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fpmdmce0thctd644wq96xk%2Fshorts-vtuber.mp4%3Frlkey%3D57sbw59ndzxeiz2wch2xqevy1%26st%3Db1o80xu4%26raw%3D1&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto",
+        link: "#"
+      },
+      {
+        title: "Game Title 5",
+        description: "Experience the thrill of a new adventure in this captivating game.",
+        videoSrc: "https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=false&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fpmdmce0thctd644wq96xk%2Fshorts-vtuber.mp4%3Frlkey%3D57sbw59ndzxeiz2wch2xqevy1%26st%3Db1o80xu4%26raw%3D1&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto",
+        link: "#"
+      },
+    ];
+
+    const softwareData = [
+      {
+        title: "M&M (Mood and Motivation)",
+        description: "M&M is an emotion-responsive app which helps people to get motivational quotes based on their current mood.",
+        videoSrc: "https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=false&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fpmdmce0thctd644wq96xk%2Fshorts-vtuber.mp4%3Frlkey%3D57sbw59ndzxeiz2wch2xqevy1%26st%3Db1o80xu4%26raw%3D1&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto",
+        link: "https://www.mediafire.com/file/22z4yjs90a6915v/M%2526M%2528Mood_and_motivation%2529.apk/file"
+      },
+      {
+        title: "Mood Tracker",
+        description: "Track your mood and mood swings with the help of Mood Tracker, a simple software which stores every mood change and displays the data.",
+        videoSrc: "https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=false&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fpmdmce0thctd644wq96xk%2Fshorts-vtuber.mp4%3Frlkey%3D57sbw59ndzxeiz2wch2xqevy1%26st%3Db1o80xu4%26raw%3D1&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto",
+        link: "https://www.mediafire.com/file/nm5bb07w513f2no/MOOD_TRACKER.apk/file"
+      },
+      // SWAPPED ENTRY: VKEnhancer replaced by Motivateme
+      {
+        title: "Motivateme",
+        description: "Motivateme helps people to gain a boost up for fire and motivation quotes by daily.",
+        videoSrc: "https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=false&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fpmdmce0thctd644wq96xk%2Fshorts-vtuber.mp4%3Frlkey%3D57sbw59ndzxeiz2wch2xqevy1%26st%3Db1o80xu4%26raw%3D1&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto",
+        link: "https://www.mediafire.com/file/jwfbux6usyyyzgy/Motivate.me.apk/file"
+      },
+      {
+        title: "ColorPalettePro",
+        description: "A sleek tool for designers to generate, save, and manage custom color palettes with ease.",
+        videoSrc: "https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=false&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fpmdmce0thctd644wq96xk%2Fshorts-vtuber.mp4%3Frlkey%3D57sbw59ndzxeiz2wch2xqevy1%26st%3Db1o80xu4%26raw%3D1&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto",
+        link: "#"
+      },
+      {
+        title: "TaskFlow",
+        description: "A minimalist task manager designed to keep you focused and productive throughout your day.",
+        videoSrc: "https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=false&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fpmdmce0thctd644wq96xk%2Fshorts-vtuber.mp4%3Frlkey%3D57sbw59ndzxeiz2wch2xqevy1%26st%3Db1o80xu4%26raw%3D1&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto",
+        link: "#"
+      },
+      {
+        title: "CHROMA WAVE",
+        description: "Chroma Wave is a simple, sleek, fast, responsive gradient maker, allowing designers and artists to easily create and visualize stunning color transitions.",
+        videoSrc: "https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=false&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fpmdmce0thctd644wq96xk%2Fshorts-vtuber.mp4%3Frlkey%3D57sbw59ndzxeiz2wch2xqevy1%26st%3Db1o80xu4%26raw%3D1&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto",
+        link: "https://www.mediafire.com/file/i074b64oytt8mst/Chroma+Wave.apk/file"
+      },
+      {
+        title: "TrackMySalary",
+        description: "TrackMySalary is an app designed for people who need to mark their shifts/salary pay day/counting on the month for salary. Track my salary stores data and refines it for clear, classified display of salary details.",
+        videoSrc: "https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=false&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fpmdmce0thctd644wq96xk%2Fshorts-vtuber.mp4%3Frlkey%3D57sbw59ndzxeiz2wch2xqevy1%26st%3Db1o80xu4%26raw%3D1&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto",
+        link: "https://www.mediafire.com/file/wqsrzyw0qiok0a6/TrackMySalary.apk/file"
+      },
+      {
+        title: "VK POS",
+        description: "A point of sale software which can help shop keepers and many business model's, fast and local stored, responsive.",
+        videoSrc: "https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=false&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fpmdmce0thctd644wq96xk%2Fshorts-vtuber.mp4%3Frlkey%3D57sbw59ndzxeiz2wch2xqevy1%26st%3Db1o80xu4%26raw%3D1&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto",
+        link: "https://www.mediafire.com/file/s5m2e3gg0rwy2d2/VK+POS+.apk/file"
+      }
+    ];
+
+    const crochetData = [
+      {
+        type: "Pattern",
+        title: "Neon Cyberpunk Scarf Pattern",
+        description: "A digital PDF pattern featuring complex colorwork and unique stitches to create a futuristic, warm scarf.",
+        linkText: "Get Pattern (PDF)",
+        link: "#pattern-download-1",
+        videoSrc: "https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=false&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fpmdmce0thctd644wq96xk%2Fshorts-vtuber.mp4%3Frlkey%3D57sbw59ndzxeiz2wch2xqevy1%26st%3Db1o80xu4%26raw%3D1&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto",
+        label: "Difficulty: Advanced"
+      },
+      {
+        type: "Tutorial",
+        title: "Beginner: Magic Ring Tutorial",
+        description: "A step-by-step video guide perfect for beginners learning to start projects without a hole. The foundation for amigurumi!",
+        linkText: "Watch on YouTube",
+        link: "https://youtube.com/watch?v=xxxxxxxx", // Replace with actual YouTube link
+        videoSrc: "https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=false&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Ftc1hd1ba5b916pcwcf4i7%2Fkm_20251117_1080p_60f_20251117_231148.mp4%3Frlkey%3Dq37w8gr1o3lj988nvupcryy1l%26st%3DlUnb7dcw%26raw%3D1&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto",
+        label: "Skill: Easy"
+      },
+      {
+        type: "Item Showcase",
+        title: "The 'To the Life' Amigurumi",
+        description: "Showcase of a finished crochet doll inspired by the main character of your game 'To the Life'. (Not for sale, inspiration only)",
+        linkText: "View Gallery",
+        link: "https://www.instagram.com/vk_games_softwares", // Link to Instagram gallery
+        videoSrc: "https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=false&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fgwa0r1p4vch7fn9eimmh2%2Fkm_20250628_1440p_60f_20250628_072335.mp4%3Frlkey%3Do63qbh95xykyijmjsa2znwx33%26st%3Drqena374%26raw%3D1&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto",
+        label: "Finished Project"
+      }
+    ];
+
+    // --- Initialization on DOM Load ---
+    document.addEventListener('DOMContentLoaded', () => {
+      initCounters();
+      setupPanelButtons();
+      setupPopupButtons();
+      renderProjects('gamePanelContent', gamesData, 'game');
+      renderProjects('softwarePanelContent', softwareData, 'app');
+      // NEW: Render the integrated crochet content
+      renderCrochet();
+      
+      // Add event listeners for instant search on keyup
+      document.getElementById('gameSearchInput').addEventListener('keyup', (event) => {
+        searchProjects('gameSearchInput', 'gamePanelContent', gamesData, 'game');
+      });
+      document.getElementById('softwareSearchInput').addEventListener('keyup', (event) => {
+        searchProjects('softwareSearchInput', 'softwarePanelContent', softwareData, 'app');
+      });
+      
+      // Setup click outside listeners for popups
+      document.getElementById('crochetPopup').addEventListener('click', (e) => {
+        if (e.target.id === 'crochetPopup') {
+          closePopup('crochetPopup');
+        }
+      });
+    });
+
+    // --- Functions ---
+
+    /**
+     * Animates the game and software counters.
+     */
+    function initCounters() {
+      let currentGames = 0;
+      let currentApps = 0;
+      const gamesCountElem = document.getElementById('gamesCount');
+      const appsCountElem = document.getElementById('appsCount');
+
+      const maxGames = gamesData.length;
+      const maxApps = softwareData.length;
+
+      // Use Math.max to ensure counters show at least 0 if data is empty
+      gamesCountElem.textContent = maxGames;
+      appsCountElem.textContent = maxApps;
+
+      // Only animate if there's actual data to count up to
+      if (maxGames > 0 || maxApps > 0) {
+        gamesCountElem.textContent = 0; // Reset for animation
+        appsCountElem.textContent = 0; // Reset for animation
+
+        const interval = setInterval(() => {
+          let countingFinished = true;
+          if (currentGames < maxGames) {
+            gamesCountElem.textContent = ++currentGames;
+            countingFinished = false;
+          }
+          if (currentApps < maxApps) {
+            appsCountElem.textContent = ++currentApps;
+            countingFinished = false;
+          }
+          if (countingFinished) {
+            clearInterval(interval);
+          }
+        }, 150);
+      }
+    }
+
+    /**
+     * Sets up event listeners for the slide panel open/close buttons.
+     */
+    function setupPanelButtons() {
+      document.getElementById('gameBtn').addEventListener('click', () => openPanel('gamePanel'));
+      document.getElementById('softwareBtn').addEventListener('click', () => openPanel('softwarePanel'));
+    }
+
+    /**
+     * Opens a specified slide panel and hides the main panel buttons.
+     * @param {string} id - The ID of the panel to open.
+     */
+    function openPanel(id) {
+      document.getElementById(id).classList.add('open');
+      document.getElementById('gameBtn').classList.add('hidden');
+      document.getElementById('softwareBtn').classList.add('hidden');
+      document.body.style.overflow = 'hidden'; // Prevent scrolling background when side panel is open
+      // Trigger reflow to ensure smooth transition on elements that might affect layout
+      document.body.offsetWidth;
+    }
+
+    /**
+     * Closes a specified slide panel and shows the main panel buttons.
+     * @param {string} id - The ID of the panel to close.
+     */
+    function closePanel(id) {
+      document.getElementById(id).classList.remove('open');
+      // Adding a slight delay to re-show buttons after panel animation starts to hide
+      setTimeout(() => {
+        document.getElementById('gameBtn').classList.remove('hidden');
+        document.getElementById('softwareBtn').classList.remove('hidden');
+      }, 300); // Matches --transition-slow
+      document.body.style.overflow = ''; // Restore scrolling
+    }
+
+    /**
+     * Sets up event listeners for popup open/close buttons and outside click.
+     */
+    function setupPopupButtons() {
+      document.getElementById('showPrivacyBtn').addEventListener('click', () => {
+        openPopup('privacyPopup');
+      });
+      document.getElementById('showContactBtn').addEventListener('click', () => {
+        openPopup('contactPopup');
+      });
+      document.getElementById('showPartnersBtn').addEventListener('click', () => {
+        openPopup('partnersPopup');
+      });
+      
+      // Re-setup click handler for Crochet Hub button
+      document.getElementById('showCrochetBtn').addEventListener('click', () => {
+        openPopup('crochetPopup');
+      });
+
+
+      // Close popups when clicking outside the content (on the overlay itself)
+      document.getElementById('privacyPopup').addEventListener('click', (e) => {
+        if (e.target.id === 'privacyPopup') {
+          closePopup('privacyPopup');
+        }
+      });
+      document.getElementById('contactPopup').addEventListener('click', (e) => {
+        if (e.target.id === 'contactPopup') {
+          closePopup('contactPopup');
+        }
+      });
+      document.getElementById('partnersPopup').addEventListener('click', (e) => {
+        if (e.target.id === 'partnersPopup') {
+          closePopup('partnersPopup');
+        }
+      });
+    }
+
+    /**
+     * Opens a specified popup.
+     * @param {string} id - The ID of the popup overlay to open.
+     */
+    function openPopup(id) {
+      document.getElementById(id).style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // Lock main scroll
+      // Trigger reflow
+      document.getElementById(id).offsetWidth;
+    }
+
+    /**
+     * Closes a specified popup.
+     * @param {string} id - The ID of the popup overlay to close.
+     */
+    function closePopup(id) {
+      document.getElementById(id).style.display = 'none';
+      document.body.style.overflow = ''; // Restore main scroll
+    }
+
+    /**
+     * Dynamically renders game/app cards into a specified container.
+     * @param {string} containerId - The ID of the HTML element where cards will be rendered.
+     * @param {Array<Object>} dataArray - An array of project objects.
+     * @param {string} type - 'game' or 'app' to determine card class.
+     * @param {string} [searchTerm=''] - Optional search term to filter results.
+     */
+    function renderProjects(containerId, dataArray, type, searchTerm = '') {
+      const container = document.getElementById(containerId);
+      if (!container) {
+        console.error(`Container with ID '${containerId}' not found. Cannot render ${type}s.`);
+        return;
+      }
+      container.innerHTML = ''; // Clear existing content
+
+      const lowerCaseSearchTerm = searchTerm.toLowerCase();
+      const filteredData = dataArray.filter(project =>
+        project.title.toLowerCase().includes(lowerCaseSearchTerm) ||
+        project.description.toLowerCase().includes(lowerCaseSearchTerm)
+      );
+
+      if (filteredData.length === 0) {
+        container.innerHTML = `<p style="text-align: center; color: #aaa; margin-top: 20px;">No matching ${type}s found.</p>`;
+        return;
+      }
+
+      filteredData.forEach(project => {
+        const card = document.createElement('div');
+        card.className = `${type}-card`; // Will be 'game-card' or 'app-card'
+
+        // Check if videoSrc exists before adding video player
+        const videoPlayerHtml = project.videoSrc ? `
+          <div class="card-video-container">
+            <iframe
+              src="${project.videoSrc}"
+              title="${project.title} Video"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        ` : '';
+
+        card.innerHTML = `
+          <h3>${project.title}</h3>
+          <p>${project.description}</p>
+          ${videoPlayerHtml} <a href="${project.link}" target="_blank" rel="noopener noreferrer">Download / Learn More</a>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    /**
+     * Initiates a search for projects based on input.
+     * @param {string} inputId - The ID of the search input field.
+     * @param {string} containerId - The ID of the content container to render into.
+     * @param {Array<Object>} dataArray - The full array of project data (gamesData or softwareData).
+     * @param {string} type - 'game' or 'app'.
+     */
+    function searchProjects(inputId, containerId, dataArray, type) {
+      const searchTerm = document.getElementById(inputId).value;
+      renderProjects(containerId, dataArray, type, searchTerm);
+    }
+    
+    /**
+     * Toggles the visibility of an FAQ answer.
+     * @param {HTMLElement} questionElement - The FAQ question div element.
+     */
+    function toggleFaq(questionElement) {
+        const expanded = questionElement.getAttribute('aria-expanded') === 'true' || false;
+        questionElement.setAttribute('aria-expanded', !expanded);
+
+        const answerElement = questionElement.nextElementSibling;
+        answerElement.classList.toggle('open');
+    }
+
+    /**
+     * Dynamically renders crochet cards into the hub section.
+     */
+    function renderCrochet() {
+      const container = document.getElementById('crochetContent');
+      if (!container) return; // Exit if container doesn't exist
+
+      crochetData.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'crochet-card';
+
+        const videoPlayerHtml = item.videoSrc ? `
+          <div class="video-container">
+            <iframe
+              src="${item.videoSrc}"
+              title="${item.title} Video"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        ` : '';
+
+        card.innerHTML = `
+          <h3 style="margin-bottom: 5px;">${item.title} (${item.type})</h3>
+          <p style="color: var(--accent-color); font-weight: bold; margin-bottom: 5px;">${item.label}</p>
+          ${videoPlayerHtml} 
+          <p>${item.description}</p>
+          <div class="crochet-card-actions">
+            <a href="${item.link}" target="_blank" rel="noopener noreferrer">${item.linkText}</a>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>
