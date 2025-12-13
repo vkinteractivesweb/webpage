@@ -1,0 +1,1937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VK INTERACTIVES - Official webpage .</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Official website for VK INTERACTIVES. Explore our innovative games and software like 'To the Life', 'Mood Tracker', 'Motivateme', and 'M&M', plus our new Crochet Hub!">
+  <link rel="icon" href="favicon.ico">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-app-pub-7502821186819058"
+     crossorigin="anonymous"></script>
+  <style>
+    /* CSS Variables */
+    :root {
+      --primary-bg: #0a0a0a;
+      --text-color: #e0e0e0; /* Slightly lighter for futuristic feel */
+      --accent-color: #00ffff; /* Bright Cyan */
+      --accent-hover: #00e6e6; /* Slightly darker cyan for hover */
+      --accent-glow: rgba(0, 255, 255, 0.6);
+      --accent-glow-strong: rgba(0, 255, 255, 0.8);
+      --dark-panel-bg: #1a1a1a; /* Darker background for solid elements */
+      --glass-bg-light: rgba(255, 255, 255, 0.08); /* More transparent */
+      --glass-bg-dark: rgba(0, 0, 0, 0.6); /* Darker, slightly opaque glass */
+
+      --border-accent: 3px solid var(--accent-color);
+      --border-dark: 3px solid #333;
+      --border-glass: 2px solid rgba(0, 255, 255, 0.4); /* Refined glass border */
+      --shadow-accent-light: 0 0 15px var(--accent-glow);
+      --shadow-accent-medium: 0 0 20px var(--accent-glow); /* Stronger medium glow */
+      --shadow-accent-heavy: 0 0 40px var(--accent-glow-strong); /* Very strong glow */
+
+      --spacing-sm: 10px;
+      --spacing-md: 20px;
+      --spacing-lg: 30px;
+      --spacing-xl: 40px;
+
+      --font-size-base: 1rem;
+      --font-size-sm: 0.9rem;
+      --font-size-lg: 1.2rem;
+      --font-size-xl: 2.2rem; /* Slightly larger for impact */
+      --font-size-heading: 2.8rem; /* More prominent headings */
+
+      --transition-fast: 0.2s ease-out;
+      --transition-medium: 0.3s ease-out;
+      --transition-slow: 0.4s ease-out;
+      
+      /* --- NEW ROYAL THEME VARIABLES --- */
+      --royal-gold: #FFD700; /* Solid Gold */
+      --royal-red: #8B0000; /* Dark Red/Maroon */
+      --royal-glow: rgba(255, 215, 0, 0.8);
+
+      /* --- NEW CROCHET HUB VARIABLES --- */
+      --yarn-accent: #ff8c00; /* Dark Orange/Amber for Warmth */
+      --yarn-text: #fff0e6;
+      --yarn-glow: rgba(255, 140, 0, 0.7);
+    }
+    
+    /* --- NEW CSS FOR SPLASH SCREEN --- */
+    #splash-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--primary-bg); /* Use the existing dark background variable */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999; /* Ensure it's on top of everything */
+        opacity: 1;
+        transition: opacity 0.5s ease-out; /* Smooth fade out */
+    }
+
+    #splash-screen.fade-out {
+        opacity: 0;
+        pointer-events: none; /* Make it unclickable after fade out */
+    }
+
+    #splash-screen img {
+        max-width: 90%;
+        max-height: 90vh;
+        border-radius: 10px;
+        box-shadow: 0 0 30px var(--accent-glow-strong);
+    }
+
+    /* Style to hide the main content until the splash screen is done */
+    #main-content {
+        opacity: 0;
+        transition: opacity 0.5s ease-in; /* Smooth fade in */
+    }
+
+    #main-content.visible {
+        opacity: 1;
+    }
+    /* --- END NEW CSS FOR SPLASH SCREEN --- */
+
+    /* Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--primary-bg);
+      color: var(--text-color);
+      font-family: 'Segoe UI', 'Arial', sans-serif; /* Fallback for futuristic font */
+      /* If using Google Font, uncomment: */
+      /* font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif; */
+      padding: var(--spacing-md);
+      text-align: center;
+      overflow-x: hidden;
+      position: relative; /* For background effects */
+      min-height: 100vh; /* Ensure full height for background */
+
+      /* Futuristic Background Pattern */
+      background-image:
+        radial-gradient(circle at center, rgba(0, 255, 255, 0.05) 0%, transparent 70%),
+        linear-gradient(45deg, var(--primary-bg) 25%, transparent 25%, transparent 75%, var(--primary-bg) 75%, var(--primary-bg)),
+        linear-gradient(135deg, var(--primary-bg) 25%, transparent 25%, transparent 75%, var(--primary-bg) 75%, var(--primary-bg));
+      background-size: 50px 50px;
+      background-position: 0 0, 10px 10px;
+    }
+
+    h1, h2, h3 {
+      color: var(--accent-color);
+      margin-bottom: var(--spacing-md);
+      text-shadow: 0 0 5px rgba(0, 255, 255, 0.3); /* Subtle text glow */
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: color var(--transition-fast), text-shadow var(--transition-fast);
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+      text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+    }
+
+    /* Header */
+    header {
+      margin-bottom: var(--spacing-xl);
+      padding-top: var(--spacing-md);
+    }
+
+    header h1 {
+      font-size: var(--font-size-heading);
+      margin-top: var(--spacing-md);
+      margin-bottom: var(--spacing-sm);
+      color: var(--text-color); /* Main title stands out */
+      text-shadow: var(--shadow-accent-light);
+    }
+
+    .tagline {
+      font-size: var(--font-size-lg);
+      color: var(--accent-color);
+      margin-bottom: var(--spacing-xl);
+      text-shadow: 0 0 3px rgba(0, 255, 255, 0.3);
+    }
+
+    .top-logo-video {
+      width: 140px; /* Slightly larger */
+      height: 140px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto var(--spacing-md);
+      border: var(--border-accent);
+      box-shadow: var(--shadow-accent-medium);
+      position: relative; /* For animation */
+      animation: pulsate 2s infinite alternate ease-in-out; /* Subtle pulse */
+    }
+
+    .top-logo-video iframe {
+      width: 100%;
+      height: 100%;
+    }
+    
+    /* ADDED to make the new <img> tag fill the space */
+    .top-logo-video img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Main Hero Section */
+    .hero-video-section {
+      position: relative;
+      width: 100%;
+      max-width: 1000px; /* Slightly wider */
+      margin: 0 auto; /* Removed bottom margin, now handled by the new button container */
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      border-radius: 20px; /* More rounded */
+      overflow: hidden;
+      border: var(--border-dark);
+      box-shadow: var(--shadow-accent-heavy); /* Stronger initial glow */
+      transition: box-shadow var(--transition-medium);
+    }
+
+    .hero-video-section:hover {
+        box-shadow: 0 0 60px var(--accent-glow-strong); /* Even stronger on hover */
+    }
+
+    .hero-video-section iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .count-overlay {
+      position: absolute;
+      top: var(--spacing-md); /* More space from top */
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 var(--spacing-lg); /* More padding */
+      z-index: 10;
+    }
+
+    .count-circle {
+      width: 110px; /* Slightly larger */
+      height: 110px;
+      border-radius: 50%;
+      background: rgba(0, 255, 255, 0.08);
+      border: 4px solid var(--accent-color); /* Thicker border */
+      color: var(--accent-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: var(--shadow-accent-light);
+      backdrop-filter: blur(8px); /* More blur for glassy effect */
+      font-weight: bold;
+      transition: transform var(--transition-medium), box-shadow var(--transition-medium), border-color var(--transition-medium);
+    }
+
+    .count-circle:hover {
+      transform: translateY(-8px) scale(1.1); /* More pronounced lift */
+      box-shadow: 0 0 30px var(--accent-glow-strong); /* Stronger glow on hover */
+      border-color: var(--accent-hover);
+    }
+
+    .count-circle .number {
+      font-size: var(--font-size-xl);
+      text-shadow: var(--shadow-accent-light);
+    }
+
+    .count-circle .label {
+      font-size: 0.9rem; /* Slightly larger label */
+      margin-top: 6px;
+      color: var(--text-color);
+    }
+    
+    /* NEW CSS BLOCK: Container for buttons below the hero video */
+    .buttons-below-hero {
+        display: flex;
+        justify-content: center; /* Center the buttons horizontally */
+        gap: var(--spacing-lg); /* Space between the buttons */
+        max-width: 960px;
+        /* Adds the requested spacing below the video and before the next section */
+        margin: var(--spacing-lg) auto var(--spacing-xl); 
+        padding: 0 var(--spacing-md);
+    }
+
+    /* Panel Buttons */
+    /* UPDATED: Panel buttons are now positioned below the hero video, so absolute positioning is removed. 
+               The new flex container `.buttons-below-hero` handles the layout. */
+    .panel-btn {
+      /* REMOVED: position: absolute; */
+      /* REMOVED: top: var(--spacing-md); */
+      width: 60px; /* Larger buttons */
+      height: 60px;
+      border-radius: 50%;
+      background-color: var(--accent-color);
+      color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.8rem; /* Larger icon */
+      cursor: pointer;
+      z-index: 1000; /* Keep high z-index for interaction */
+      transition: opacity var(--transition-medium), background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+      border: none;
+      box-shadow: var(--shadow-accent-medium);
+    }
+    
+    /* DELETED: The specific #gameBtn, #softwareBtn, #topAppsBtn positioning rules */
+
+    .panel-btn:hover {
+      background-color: var(--accent-hover);
+      transform: scale(1.15) rotate(5deg); /* More dynamic hover */
+      box-shadow: 0 0 25px var(--accent-glow-strong);
+    }
+
+    .panel-btn.hidden {
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0.8); /* Shrink when hidden */
+    }
+
+    /* Slide Panels (Games & Software) */
+    .slide-panel {
+      position: fixed;
+      top: 0;
+      width: 85%; /* Slightly wider */
+      max-width: 450px; /* Wider max width */
+      height: 100%;
+      background: var(--glass-bg-light);
+      backdrop-filter: blur(15px); /* More blur for stronger glass */
+      color: var(--text-color);
+      padding: var(--spacing-lg); /* More internal padding */
+      overflow-y: auto;
+      transform: translateX(100%);
+      transition: transform var(--transition-slow);
+      z-index: 999;
+      box-shadow: var(--shadow-accent-heavy);
+      border-left: var(--border-glass); /* Consistent glass border */
+      border-right: var(--border-glass);
+    }
+
+    #gamePanel { right: 0; }
+    #softwarePanel { left: 0; transform: translateX(-100%); }
+    /* NEW: Top Apps Panel slides from the right, like gamePanel */
+    #topAppsPanel { right: 0; } 
+
+    .slide-panel.open#gamePanel { transform: translateX(0); }
+    .slide-panel.open#softwarePanel { transform: translateX(0); }
+    /* NEW: Open state for Top Apps Panel */
+    .slide-panel.open#topAppsPanel { transform: translateX(0); }
+
+    .close-panel {
+      position: sticky; /* Make close button stick to top */
+      top: var(--spacing-md);
+      left: calc(100% - 40px); /* Adjust position based on button size for right-sliding panels */
+      font-size: 1.8rem; /* Larger close icon */
+      background: var(--accent-color);
+      color: black;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 101; /* Above panel content */
+      transition: background-color var(--transition-fast), transform var(--transition-fast);
+      border: none;
+      box-shadow: var(--shadow-accent-light);
+    }
+    
+    /* Adjustment for left-sliding panel close button */
+    #softwarePanel .close-panel {
+        left: 5px; /* Position from the left edge of the panel */
+    }
+
+    .close-panel:hover {
+      background-color: var(--accent-hover);
+      transform: scale(1.1) rotate(90deg); /* Spin on hover */
+    }
+
+    .panel-content {
+      margin-top: var(--spacing-xl);
+      padding-top: var(--spacing-sm); /* Account for sticky button */
+    }
+
+    .app-card, .game-card, .top-app-card {
+      background: var(--glass-bg-dark);
+      padding: var(--spacing-md);
+      margin-bottom: var(--spacing-md);
+      border-radius: 12px;
+      box-shadow: var(--shadow-accent-medium);
+      text-align: left;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+      border: 1px solid rgba(0, 255, 255, 0.2); /* Subtle card border */
+    }
+    
+    /* NEW: Style for the Top Apps card to slightly distinguish it */
+    .top-app-card {
+        border: 2px solid var(--royal-gold); /* Use a more prominent border */
+        box-shadow: 0 0 15px var(--royal-glow);
+    }
+    .top-app-card h3 {
+        color: var(--royal-gold) !important;
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+    }
+
+    .app-card:hover, .game-card:hover, .top-app-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px var(--accent-glow);
+      background: rgba(0, 255, 255, 0.05); /* Lighter glass on hover */
+    }
+
+    .app-card h3, .game-card h3, .top-app-card h3 {
+      color: var(--accent-color);
+      margin-bottom: 8px;
+      font-size: var(--font-size-lg);
+    }
+
+    .app-card p, .game-card p, .top-app-card p {
+      font-size: var(--font-size-sm);
+      margin-bottom: 12px;
+    }
+
+    /* Video player container within cards */
+    .card-video-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      margin-bottom: var(--spacing-md);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid rgba(0, 255, 255, 0.3);
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+      background-color: #000; /* Ensures black background while loading */
+    }
+
+    .card-video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+
+    .app-card a, .game-card a, .top-app-card a {
+      background: var(--accent-color);
+      padding: 8px 16px; /* Larger button */
+      border-radius: 8px; /* More rounded */
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.3); /* Button glow */
+    }
+
+    .app-card a:hover, .game-card a:hover, .top-app-card a:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 0 15px var(--accent-glow-strong);
+    }
+
+    /* Info Section */
+    .info-section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-md);
+      max-width: 960px;
+      margin: 0 auto var(--spacing-lg);
+    }
+
+    .info-box {
+      background: var(--dark-panel-bg);
+      padding: var(--spacing-md);
+      border-radius: 16px; /* More rounded */
+      box-shadow: var(--shadow-accent-medium);
+      transition: transform var(--transition-medium), box-shadow var(--transition-medium), background var(--transition-medium);
+      border: 1px solid rgba(0, 255, 255, 0.15); /* Subtle border */
+      text-align: center; /* Ensure contents are centered */
+    }
+
+    .info-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 30px var(--accent-glow);
+      background: #222; /* Slightly lighter on hover */
+    }
+    
+    /* NEW WELCOME IMAGE STYLE */
+    .welcome-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        margin-top: 0; 
+        margin-bottom: var(--spacing-md);
+        border: 4px solid var(--accent-color);
+        box-shadow: 0 0 20px var(--accent-glow);
+        transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        display: block; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .welcome-image:hover {
+        transform: scale(1.01);
+        box-shadow: 0 0 35px var(--accent-glow-strong);
+        border-color: var(--accent-hover);
+    }
+
+    /* Social Buttons - Now inside extra-box */
+    .social-links {
+        padding: var(--spacing-md); /* Add padding to the whole block */
+        border-radius: 16px; /* Match other blocks */
+        background: var(--glass-bg-light); /* Match extra-box style */
+        backdrop-filter: blur(10px);
+        box-shadow: var(--shadow-accent-medium);
+        transition: transform var(--transition-medium), box-shadow var(--transition-medium), background var(--transition-medium);
+        border: var(--border-glass); /* Consistent glass border */
+        color: #ccc;
+    }
+    .social-links:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 0 25px var(--accent-glow);
+        background: rgba(0, 255, 255, 0.08);
+    }
+
+    .social-links h2 {
+        margin-top: 0; /* Adjust margin as it's now in a box */
+        margin-bottom: var(--spacing-md);
+        text-align: center;
+    }
+
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-lg); /* More space between buttons */
+      flex-wrap: wrap;
+      margin-bottom: 0; /* No external margin needed here */
+    }
+
+    .social-btn {
+      width: 70px; /* Larger social buttons */
+      height: 70px;
+      border-radius: 50%;
+      background-color: var(--accent-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #000;
+      font-size: 1.8rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+      box-shadow: var(--shadow-accent-medium);
+    }
+
+    .social-btn:hover {
+      background-color: var(--accent-hover);
+      transform: scale(1.2) rotate(10deg); /* More dynamic hover */
+      box-shadow: 0 0 30px var(--accent-glow-strong);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* Extra Blocks */
+    .extra-blocks {
+      max-width: 960px;
+      margin: var(--spacing-xl) auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--spacing-md);
+    }
+
+    .extra-box {
+      background: var(--glass-bg-light);
+      padding: var(--spacing-md);
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow-accent-medium);
+      transition: transform var(--transition-medium), box-shadow var(--transition-medium), background var(--transition-medium);
+      border: var(--border-glass); /* Consistent glass border */
+      color: #ccc; /* Slightly dimmer text */
+      text-align: center; /* Default text alignment */
+    }
+
+    .extra-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px var(--accent-glow);
+      background: rgba(0, 255, 255, 0.08); /* Lighter glass on hover */
+    }
+
+    /* --- NEW/UPDATED CSS for Extra Block 1 (Members) --- */
+    .extra-box-members {
+        text-align: left;
+    }
+
+    .extra-box-members h3 {
+        text-align: center;
+        margin-bottom: var(--spacing-md);
+        font-size: var(--font-size-lg);
+        color: var(--text-color);
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+    }
+
+    .member-card {
+        padding: var(--spacing-sm) 0;
+        margin-bottom: var(--spacing-md);
+        border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+    }
+
+    .member-card:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .member-name {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: gold; /* Golden color */
+        text-shadow: 0 0 8px rgba(255, 215, 0, 0.8), 0 0 3px rgba(0, 0, 0, 0.9); /* Golden texture/shadow */
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .member-role {
+        font-size: 0.9rem;
+        color: #fff;
+        display: block;
+        padding: 4px 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 500;
+        /* Animation for Role Highlight */
+        animation: role-glow 2s infinite alternate ease-in-out;
+    }
+
+    @keyframes role-glow {
+        0% { color: #fff; text-shadow: 0 0 2px rgba(255, 255, 255, 0.1); }
+        100% { color: var(--accent-color); text-shadow: 0 0 8px var(--accent-glow); }
+    }
+
+    .member-link-btn {
+        background: var(--accent-color);
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 8px;
+        font-size: 0.8rem;
+        transition: background-color var(--transition-fast), transform var(--transition-fast);
+        box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+    }
+
+    .member-link-btn:hover {
+        background-color: var(--accent-hover);
+        transform: scale(1.05);
+        text-decoration: none;
+    }
+    /* --- END NEW/UPDATED CSS for Extra Block 1 --- */
+    
+    /* --- NEW CSS for Supporter Gallery Block (Now for the Popup) --- */
+    .supporter-gallery-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        /* Inherits general styling from .extra-box (but will be overridden in popup) */
+    }
+
+    .supporter-gallery-block h3 {
+        color: var(--royal-gold); /* Use a distinguished color */
+        text-shadow: 0 0 10px var(--royal-glow);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .supporter-card-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: var(--glass-bg-dark);
+        padding: var(--spacing-sm);
+        border-radius: 12px;
+        margin-bottom: var(--spacing-md);
+        width: 100%;
+        border: 1px solid var(--royal-gold);
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+        transition: transform 0.3s ease-out;
+    }
+
+    .supporter-card-image:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 20px var(--royal-glow);
+    }
+
+    .supporter-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 10px;
+        border: 3px solid var(--accent-color);
+        box-shadow: 0 0 10px var(--accent-glow);
+    }
+
+    .supporter-name-image {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: var(--royal-gold);
+        margin-bottom: 5px;
+    }
+
+    .supporter-role-image {
+        font-size: 0.9rem;
+        color: #ccc;
+        font-style: italic;
+        margin-bottom: 10px;
+    }
+    .supporter-link {
+        background: var(--royal-gold);
+        padding: 6px 12px;
+        border-radius: 6px;
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 0.8rem;
+        transition: background-color var(--transition-fast);
+        box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+    }
+    .supporter-link:hover {
+        background-color: #e6c200;
+        text-decoration: none;
+        box-shadow: 0 0 15px var(--royal-glow);
+    }
+    /* --- END NEW CSS for Supporter Gallery Block --- */
+
+
+    /* News & Updates Block */
+    .news-updates-block {
+      background: var(--dark-panel-bg);
+      padding: var(--spacing-md);
+      border-radius: 16px;
+      box-shadow: var(--shadow-accent-medium);
+      border: 1px solid rgba(0, 255, 255, 0.15);
+      text-align: left;
+    }
+
+    .news-updates-block h3 {
+        color: var(--accent-color);
+        margin-bottom: var(--spacing-md);
+        text-align: center;
+    }
+
+    .news-item {
+        margin-bottom: var(--spacing-sm);
+        padding-bottom: var(--spacing-sm);
+        border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+    }
+
+    .news-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .news-item .date {
+        font-size: 0.8em;
+        color: #888;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .news-item p {
+        font-size: 0.9em;
+        color: var(--text-color);
+    }
+
+    .news-item a {
+        font-size: 0.9em;
+        color: var(--accent-color);
+        text-decoration: underline;
+    }
+
+    .news-item a:hover {
+        color: var(--accent-hover);
+    }
+    
+    /* --- NEW CSS for Upcoming Trailer Block (Replaces Download Stats Block) --- */
+    .upcoming-trailer-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .upcoming-trailer-block h3 {
+        color: var(--accent-color);
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.4); /* Cyan glow */
+        margin-bottom: var(--spacing-md);
+    }
+
+    /* Video player container inside the extra block */
+    .trailer-video-container {
+      position: relative;
+      width: 100%;
+      /* Adjust padding to control the aspect ratio/size within the grid item */
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */ 
+      margin-bottom: var(--spacing-md);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 3px solid var(--accent-color); /* Strong border */
+      box-shadow: var(--shadow-accent-medium); /* Strong glow */
+      background-color: #000;
+      transition: box-shadow var(--transition-medium);
+    }
+
+    .trailer-video-container:hover {
+        box-shadow: 0 0 30px var(--accent-glow-strong);
+    }
+
+    .trailer-video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .trailer-note {
+        font-size: 0.8rem;
+        color: #bbb;
+        margin-top: var(--spacing-sm);
+        font-style: italic;
+    }
+    /* --- END NEW CSS for Upcoming Trailer Block --- */
+
+    /* FAQ Block */
+    .faq-block {
+        text-align: left;
+    }
+    .faq-item {
+        margin-bottom: var(--spacing-sm);
+        border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+        padding-bottom: var(--spacing-sm);
+    }
+    .faq-item:last-child {
+        border-bottom: none;
+    }
+    .faq-question {
+        font-weight: bold;
+        color: var(--accent-color);
+        cursor: pointer;
+        padding: 5px 0;
+        transition: color var(--transition-fast);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .faq-question:hover {
+        color: var(--accent-hover);
+    }
+    .faq-answer {
+        font-size: var(--font-size-sm);
+        padding-top: 5px;
+        color: #bbb;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+        opacity: 0;
+    }
+    .faq-answer.open {
+        max-height: 150px; /* Adjust based on expected max content */
+        opacity: 1;
+    }
+    .faq-icon {
+        transition: transform 0.3s ease-out;
+    }
+    .faq-question[aria-expanded="true"] .faq-icon {
+        transform: rotate(45deg);
+    }
+
+    /* Media Mention Block (using an image) */
+    .media-mention-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .media-mention-block img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: var(--spacing-md);
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    }
+    .media-mention-block p {
+        font-style: italic;
+        color: #fff;
+    }
+
+    /* Testimonial Block */
+    .testimonial-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .testimonial-quote {
+        font-size: var(--font-size-lg);
+        font-style: italic;
+        color: #fff;
+        margin-bottom: var(--spacing-md);
+        position: relative;
+        padding: 0 var(--spacing-sm);
+    }
+    .testimonial-quote::before, .testimonial-quote::after {
+        content: '“';
+        font-size: 3rem;
+        line-height: 0;
+        color: gold;
+        position: absolute;
+        opacity: 0.7;
+    }
+    .testimonial-quote::before {
+        content: '“';
+        top: 0.5rem;
+        left: 0;
+    }
+    .testimonial-quote::after {
+        content: '”';
+        bottom: 1.5rem;
+        right: 0;
+    }
+    .testimonial-author {
+        font-weight: bold;
+        color: var(--accent-color);
+        font-size: var(--font-size-base);
+        margin-top: var(--spacing-sm);
+        text-align: right;
+    }
+    
+    
+    /* Footer */
+    footer {
+      margin-top: var(--spacing-xl);
+      padding: var(--spacing-lg) 0;
+      border-top: 2px solid var(--dark-panel-bg);
+      font-size: var(--font-size-sm);
+      color: #999;
+      text-align: center;
+    }
+
+    footer p {
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .footer-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+    }
+
+    .footer-buttons a {
+        color: #bbb;
+        text-decoration: none;
+        font-size: var(--font-size-sm);
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: color var(--transition-fast), background-color var(--transition-fast);
+    }
+
+    .footer-buttons a:hover {
+        color: var(--accent-color);
+        background-color: rgba(0, 255, 255, 0.1);
+        text-decoration: none;
+    }
+
+    /* Popup Windows (General Styles) */
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.8); /* Darker overlay */
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        padding: var(--spacing-md);
+        animation: fadeIn 0.3s forwards;
+        overflow-y: auto;
+    }
+
+    .popup-content {
+        background: rgba(255,255,255,0.08); /* Lighter glass for popups */
+        backdrop-filter: blur(20px); /* Stronger blur for popups */
+        padding: var(--spacing-xl); /* More padding */
+        border-radius: 20px; /* More rounded */
+        max-width: 650px; /* Wider popup */
+        width: 90%;
+        color: var(--text-color);
+        text-align: left;
+        box-shadow: 0 0 25px var(--accent-glow-strong);
+        position: relative;
+        border: 2px solid var(--accent-color); /* Stronger border for popups */
+        animation: slideInFromTop 0.4s ease-out forwards;
+        max-height: 90vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Optional: Style scrollbar for Webkit browsers */
+    .popup-content::-webkit-scrollbar {
+        width: 8px;
+    }
+    .popup-content::-webkit-scrollbar-track {
+        background: rgba(0, 255, 255, 0.1);
+        border-radius: 10px;
+    }
+    .popup-content::-webkit-scrollbar-thumb {
+        background: var(--accent-color);
+        border-radius: 10px;
+    }
+
+    .popup-close-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: var(--accent-color);
+        cursor: pointer;
+        transition: color var(--transition-fast), transform var(--transition-fast);
+    }
+    .popup-close-btn:hover {
+        color: var(--accent-hover);
+        transform: rotate(90deg) scale(1.1);
+    }
+
+    .popup-content h2 {
+        color: var(--accent-color);
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: var(--spacing-lg);
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    }
+    
+    .popup-content h3 {
+        color: var(--text-color);
+        margin-top: var(--spacing-md);
+        margin-bottom: var(--spacing-sm);
+        text-shadow: none; /* Remove text-shadow for better contrast in content */
+        border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+        padding-bottom: 5px;
+        font-size: var(--font-size-lg);
+    }
+
+    .popup-content p {
+        font-size: var(--font-size-sm);
+        color: #bbb;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .popup-button {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        margin-top: var(--spacing-md);
+        border-radius: 10px;
+        background-color: var(--accent-color);
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+        font-size: var(--font-size-base);
+    }
+
+    .popup-button:hover {
+        background-color: var(--accent-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 0 25px var(--accent-glow-strong);
+    }
+
+    .contact-section {
+        margin-bottom: var(--spacing-lg);
+    }
+    .contact-section p {
+        margin-bottom: 5px;
+    }
+    .contact-section strong {
+        color: var(--accent-color);
+        font-weight: normal;
+        margin-right: 5px;
+    }
+    .contact-section a {
+        color: var(--accent-color);
+        text-decoration: underline;
+    }
+    .contact-section a:hover {
+        color: var(--accent-hover);
+        text-decoration: none;
+    }
+
+    /* Partner/Supporter Card Styles (Inside Popups) */
+    .partners-container, .supporter-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-md);
+        margin-top: var(--spacing-md);
+    }
+
+    .partner-card-royal {
+        background: var(--dark-panel-bg);
+        padding: var(--spacing-md);
+        border-radius: 12px;
+        border: 2px solid var(--royal-gold);
+        box-shadow: 0 0 15px var(--royal-glow);
+        text-align: center;
+        transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    }
+    .partner-card-royal:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 30px var(--royal-glow);
+    }
+
+    .partner-card-royal h3 {
+        color: var(--royal-gold);
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+        margin-bottom: 8px;
+    }
+
+    .partner-card-royal p {
+        font-size: var(--font-size-sm);
+        color: #ddd;
+        margin-bottom: 12px;
+    }
+
+    .partner-card-royal a {
+        background: var(--royal-gold);
+        padding: 8px 16px;
+        border-radius: 8px;
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color var(--transition-fast);
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+    .partner-card-royal a:hover {
+        background-color: #e6c200;
+        text-decoration: none;
+        box-shadow: 0 0 20px var(--royal-glow);
+    }
+
+    /* Crochet Hub Popup Specific */
+    .hub-title {
+        color: var(--yarn-accent) !important;
+        text-shadow: 0 0 15px var(--yarn-glow) !important;
+    }
+
+    .crochet-card {
+        background: var(--glass-bg-dark);
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+        border-radius: 12px;
+        box-shadow: 0 0 15px var(--yarn-glow);
+        text-align: left;
+        transition: transform 0.3s ease-out;
+        border: 2px solid var(--yarn-accent);
+    }
+    .crochet-card h3 {
+        color: var(--yarn-accent) !important;
+        text-shadow: 0 0 8px var(--yarn-glow) !important;
+    }
+
+    .crochet-card a {
+        background: var(--yarn-accent) !important;
+        color: black !important;
+    }
+    .crochet-card a:hover {
+        background-color: #e68000 !important;
+        box-shadow: 0 0 15px rgba(255, 140, 0, 1) !important;
+    }
+    .crochet-card-label {
+        font-size: 0.8rem;
+        color: var(--yarn-accent);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    /* Keyframe Animations */
+    @keyframes pulsate {
+        0% { transform: scale(1); box-shadow: var(--shadow-accent-medium); }
+        100% { transform: scale(1.05); box-shadow: 0 0 30px var(--accent-glow-strong); }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @keyframes slideInFromTop {
+        from { transform: translateY(-50px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 1200px) { /* General adjustments for large tablets/small desktops */ }
+    @media (max-width: 992px) {
+        /* Adjust panel width for medium screens */
+        .slide-panel { width: 100%; max-width: 100%; }
+        /* Adjust video player container for smaller screens if needed */
+        .buttons-below-hero { gap: var(--spacing-md); }
+    }
+    @media (max-width: 768px) {
+        /* Adjust count circles for smaller screens */
+        .count-circle { width: 90px; height: 90px; }
+        .count-circle .number { font-size: 1.8rem; }
+        .count-circle .label { font-size: 0.8rem; }
+        .slide-panel { width: 100%; border-radius: 0; }
+        .popup-content { border-radius: 0; padding: var(--spacing-md); max-height: 80vh; }
+        .extra-blocks { grid-template-columns: 1fr; }
+        .footer-buttons { flex-direction: column; }
+        .search-bar-container { flex-direction: column; align-items: stretch; }
+        .search-bar-container button { width: 100%; }
+        /* Adjust testimonial quote for small screens */
+        .testimonial-quote::before { font-size: 2rem; top: 0.2rem; }
+        .testimonial-quote::after { font-size: 2rem; bottom: 0.5rem; }
+        /* Adjust partners/supporter popup for small screens */
+        #partnersPopup h2, #supporterPopup h2 { font-size: 1.8rem; }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div id="splash-screen">
+    <img src="Https://www.dropbox.com/scl/fi/lt9478zc4rechduhk1o3z/km_20251211_480p_15f_20251211_001308.gif?rlkey=o3dhiu3ts3lolr7j0l6mvd28u&st=x5yjggt6&dl=1" alt="Loading Animation" style="max-width: 300px; height: auto;">
+  </div>
+  <div id="main-content">
+    <header>
+        <div class="top-logo-video">
+            <img src="https://www.dropbox.com/scl/fi/ygqqyhl7wv2cgglq0plgi/20251208_232852.png?rlkey=a6a2wc2ni3rhvvn6ovshlqtwm&st=9eci6r6q&dl=1" alt="VK Interactives Logo Animation" style="width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1 / 1;">
+        </div>
+        <h1>VK INTERACTIVES</h1>
+        <p class="tagline">NOTHING IS EASY.</p>
+    </header>
+    <main>
+        <section class="hero-video-section">
+            <div class="count-overlay">
+                <div class="count-circle">
+                    <span class="number" id="games-count">0</span>
+                    <span class="label">Games</span>
+                </div>
+                <div class="count-circle">
+                    <span class="number" id="apps-count">0</span>
+                    <span class="label">Apps</span>
+                </div>
+            </div>
+            <iframe frameborder="0" allowfullscreen="" scrolling="no" allow="autoplay;fullscreen" src="https://onelineplayer.com/player.html?autoplay=true&autopause=false&muted=true&loop=true&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Ftc1hd1ba5b916pcwcf4i7%2Fkm_20251117_1080p_60f_20251117_231148.mp4%3Frlkey%3Dq37w8gr1o3lj988nvupcryy1l%26st%3Dvg6w1a88%26raw%3D1&poster=&time=false&progressBar=false&overlay=true&muteButton=true&fullscreenButton=false&style=light&quality=auto&playButton=false" style="height: 100%; width: 100%; aspect-ratio: 1920 / 1080;"></iframe>
+        </section>
+
+        <div class="buttons-below-hero">
+            <button id="gameBtn" class="panel-btn" onclick="openPanel('gamePanel')" aria-label="Open Games List">
+                <i class="fas fa-gamepad"></i>
+            </button>
+            <button id="softwareBtn" class="panel-btn" onclick="openPanel('softwarePanel')" aria-label="Open Software List">
+                <i class="fas fa-desktop"></i>
+            </button>
+            <button id="topAppsBtn" class="panel-btn" onclick="openPanel('topAppsPanel')" aria-label="Open Top Apps List">
+                <i class="fas fa-trophy"></i>
+            </button>
+        </div>
+
+        <section class="info-section">
+            <div class="info-box">
+                <h2>Welcome to VK INTERACTIVES</h2>
+                <img src="https://www.dropbox.com/scl/fi/bkf3g7oj4w3euw4a7v0jf/unnamed.gif?rlkey=plxfe26bt7c8huqn3qt6ori64&st=6h4qopos&dl=1" alt="Welcome to VK INTERACTIVES" class="welcome-image">
+                <p>We are an independent software development and creative studio dedicated to crafting immersive experiences and innovative applications. From story-driven games to utility software, our mission is to deliver quality and fun to our users. Explore our projects, meet the team, and join our community!</p>
+            </div>
+           
+           <div class="info-box">
+                <h2>ABOUT US</h2>
+                <img src="https://www.dropbox.com/scl/fi/64t8p9bqb7a8zcgmxxhhs/68747470733a2f2f63646e2e6472696262626c652e636f6d2f75736572732f3733303730332f73637265656e73686f74732f363538313234332f6176656e746f2e676966.gif?rlkey=9x8vkx68afz08dmr92y9oe5vd&st=dq29ki3h&dl=1" alt="Welcome to VK INTERACTIVES" class="welcome-image">
+                <p>​VK INTERACTIVES is an independent studio driven by a shared passion for crafting memorable interactive experiences. We are a small team of creators, pouring our heart and soul into building unique worlds, like our ambitious narrative game, To the Life. While our focus is on indie game development, we also leverage our creative skills to produce quality utility software, such as Mood Tracker and Motivateme, to enhance daily life. Every project we launch is a labor of love, representing our commitment to originality and connecting with players on a personal level.</p>
+            </div>
+           
+           <div class="info-box">
+                <h2>OUR AIM</h2>
+                <img src="https://www.dropbox.com/scl/fi/ziwqx02ebad2h3618gazc/it77ydmUnw.gif?rlkey=5tcidbc150z8inzz5615a0zfp&st=dqtojiu7&dl=1" alt="Welcome to VK INTERACTIVES" class="welcome-image">
+                <p>​Our aim at VK INTERACTIVES is to be an independent development studio that creates deeply engaging and original digital experiences. We are driven by the passion to craft immersive worlds for players in the indie game space, while also applying our technical skills to develop practical, high-quality utility software. Leveraging the collective creativity and dedication of our small team, our goal is to consistently deliver polished, thoughtful, and memorable products across all our categories.</p>
+            </div>
+           
+           
+           
+           
+     
+        </section>
+
+        <section class="extra-blocks">
+            <div class="extra-box extra-box-members">
+                <h3>The Core Team</h3>
+                <div class="member-card">
+                    <span class="member-name">VK Vinith</span>
+                    <span class="member-role">DEVELOPMENT & FOUNDER</span>
+                    <a href="https://www.instagram.com/the_hyper_black__?igsh=MTNhc3J2bGRnNzNwZg==" target="_blank" rel="noopener noreferrer" class="member-link-btn">Instagram Profile</a>
+                </div>
+                <div class="member-card">
+                    <span class="member-name">Vishal Joshua</span>
+                    <span class="member-role">MARKETING & CONTENT CREATION</span>
+                    <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=ytp3nz5" target="_blank" rel="noopener noreferrer" class="member-link-btn">Instagram Profile</a>
+                </div>
+                <div class="member-card">
+                    <span class="member-name">UDHAYAN</span>
+                    <span class="member-role">Financial Sponsor</span>
+                    <a href="https://www.instagram.com/___udhayan___?igsh=MTNhc3J2bGRnNzNwZg==" target="_blank" rel="noopener noreferrer" class="member-link-btn">Instagram Profile</a>
+                </div>
+            </div>
+
+            <div class="extra-box news-updates-block">
+                <h3>News & Updates</h3>
+                <div class="news-item">
+                    <span class="date">Dec 11, 2025</span>
+                    <p>New main website video launched! Check out the updated hero section above!</p>
+                </div>
+                <div class="news-item">
+                    <span class="date">Nov 28, 2025</span>
+                    <p>Development on **To the Life** continues to move smoothly. Alpha testing feedback is overwhelmingly positive!</p>
+                </div>
+                <div class="news-item">
+                    <span class="date">Oct 15, 2025</span>
+                    <p>Partnership announced with **IndieDev Studio X** for our upcoming project **FLAMES**.</p>
+                </div>
+            </div>
+
+            <div class="extra-box upcoming-trailer-block">
+                <h3>Upcoming Project: FLAMES Trailer</h3>
+                <div class="trailer-video-container">
+                    <iframe src="https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=false&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fpmdmce0thctd644wq96xk%2Fshorts-vtuber.mp4%3Frlkey%3D57sbw59ndzxeiz2wch2xqevy1%26st%3Db1o80xu4%26raw%3D1&raw=1&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto" title="FLAMES Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <p class="trailer-note">A fun, simple calculator app to manage your finances. Coming soon to Android.</p>
+            </div>
+            
+            <div class="extra-box faq-block">
+                <h3>Frequently Asked Questions</h3>
+                <div class="faq-item">
+                    <div class="faq-question" role="button" aria-expanded="false" aria-controls="faq-answer-1" onclick="toggleFaq(this)">
+                        What is 'To the Life'? <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer" id="faq-answer-1">
+                        <p>It is our biggest project to date: a story-driven, choice-based life simulation game where every decision you make drastically alters the world and your character's future.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" role="button" aria-expanded="false" aria-controls="faq-answer-2" onclick="toggleFaq(this)">
+                        Are your games free? <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer" id="faq-answer-2">
+                        <p>Some of our applications and game demos are free, such as the initial release of **Mood Tracker**. Larger flagship titles like **To the Life** are planned as premium releases.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" role="button" aria-expanded="false" aria-controls="faq-answer-3" onclick="toggleFaq(this)">
+                        How can I support VK INTERACTIVES? <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer" id="faq-answer-3">
+                        <p>You can support us by following our social media channels, sharing our work, purchasing our premium apps, or visiting our Supporter Spotlight page for other options.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="extra-box media-mention-block">
+                <h3>RE-MASTER in progress</h3>
+                <img src="https://www.dropbox.com/scl/fi/kmmt8ybwo7gmx2dz0i67s/180x120.jpg?rlkey=j21puk9j2961jboqzhns3wkes&st=bhg2fbpi&dl=1" alt="Image from a tech blog about our studio">
+                <p>"We are currently working on koala sling"</p>
+            </div>
+           
+           <div class="extra-box media-mention-block">
+                <h3>IMPROVEMENTS ONGOING </h3>
+                <img src="https://www.dropbox.com/scl/fi/lqqw5foe9a4mid6cxsfb0/20250525_223432.png?rlkey=cfl8jn00u9ixomoffmbv0l2ka&st=2lfj16ck&dl=1" alt="Image from a tech blog about our studio">
+                <p>" New UI and CORE FUNCTIONS are on improvement V9.11"</p>
+            </div>
+
+            <div class="extra-box testimonial-block">
+                <h3>What Users Say</h3>
+                <p class="testimonial-quote">"The UI/UX design of Mood Tracker is incredibly intuitive. It’s the only app that actually helped me maintain a consistent journal."</p>
+                <p class="testimonial-author">— A satisfied App Store user</p>
+            </div>
+           
+           <div class="info-box social-links">
+                <h2>Connect with the Team</h2>
+                <p>Get the latest updates, announcements, and behind-the-scenes content on our social platforms!</p>
+                <div class="social-buttons">
+                    <a href="https://www.instagram.com/vk_interactives?igsh=MTNhc3J2bGRnNzNwZg==" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="VK INTERACTIVES Instagram">
+                        <span class="sr-only">Instagram</span>
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCNK0D3B06x9n87-U7V9Uf7w" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="VK INTERACTIVES YouTube">
+                        <span class="sr-only">YouTube</span>
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://discord.gg/your-discord-invite" target="_blank" rel="noopener noreferrer" class="social-btn" style="background-color: #7289DA;" aria-label="VK INTERACTIVES Discord">
+                        <span class="sr-only">Discord</span>
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="mailto:vk.vinith001@gmail.com" class="social-btn" style="background-color: #D44638;" aria-label="Email VK INTERACTIVES">
+                        <span class="sr-only">Email</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+           
+           
+           <div class="info-box">
+                <h2>BUILT WITH</h2>
+                <img src="https://www.dropbox.com/scl/fi/x6qy2og45d4kwgiitvnnh/20251213_235810.png?rlkey=5v054x78eu5471uldj5pcoexo&st=7yvo6p1y&dl=1" alt="Welcome to VK INTERACTIVES" class="welcome-image">
+                <p></p>
+            </div>
+           
+           
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 VK INTERACTIVES. All Rights Reserved. | <span class="tagline">By VK.</span></p>
+        <div class="footer-buttons">
+            <a href="#" onclick="openPopup('privacyPopup'); return false;" id="showPrivacyBtn">Privacy Policy</a>
+            <a href="#" onclick="openPopup('contactPopup'); return false;" id="showContactBtn">Contact Us</a>
+            <a href="#" onclick="openPopup('partnersPopup'); return false;" id="showPartnersBtn">Partners</a>
+            <a href="#" onclick="openPopup('supporterPopup'); return false;" id="showSupporterBtn">Supporter Spotlight</a>
+            <a href="#" onclick="openPopup('crochetPopup'); return false;" id="showCrochetBtn">WEB PROJECTS</a>
+        </div>
+    </footer>
+  </div>
+
+  <div id="gamePanel" class="slide-panel" aria-label="Games List">
+    <button class="close-panel" onclick="closePanel('gamePanel')" aria-label="Close Games List">×</button>
+    <div class="panel-content">
+        <h2>🎮 Games Library</h2>
+        <div class="search-bar-container">
+            <input type="text" id="gameSearchInput" placeholder="Search games..." oninput="renderProjects('game', this.value)">
+            <button onclick="renderProjects('game')">Search</button>
+        </div>
+        <div id="gameContent">
+            </div>
+    </div>
+  </div>
+
+  <div id="softwarePanel" class="slide-panel" aria-label="Software List">
+    <button class="close-panel" onclick="closePanel('softwarePanel')" aria-label="Close Software List">×</button>
+    <div class="panel-content">
+        <h2>🖥️ Software & Apps</h2>
+        <div class="search-bar-container">
+            <input type="text" id="softwareSearchInput" placeholder="Search software..." oninput="renderProjects('app', this.value)">
+            <button onclick="renderProjects('app')">Search</button>
+        </div>
+        <div id="softwareContent">
+            </div>
+    </div>
+  </div>
+
+  <div id="topAppsPanel" class="slide-panel" aria-label="Top Apps List">
+    <button class="close-panel" onclick="closePanel('topAppsPanel')" aria-label="Close Top Apps List">×</button>
+    <div class="panel-content">
+        <h2>🏆 Top Apps of the Month</h2>
+        <p style="text-align: center; color: var(--royal-gold); font-size: 1.1rem; font-style: italic; margin-bottom: var(--spacing-md);">The projects that are currently trending and receiving the most positive feedback.</p>
+        <div class="search-bar-container">
+            <input type="text" id="topAppsSearchInput" placeholder="Search top apps..." oninput="renderProjects('top-app', this.value)">
+            <button onclick="renderProjects('top-app')">Search</button>
+        </div>
+        <div id="topAppContent">
+            </div>
+    </div>
+  </div>
+  
+  <div id="privacyPopup" class="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="privacyPopupHeading">
+    <div class="popup-content">
+        <button class="popup-close-btn" onclick="closePopup('privacyPopup')" aria-label="Close Privacy Policy">×</button>
+        <h2 id="privacyPopupHeading">Privacy Policy</h2>
+        <p>This Privacy Policy outlines the types of information VK INTERACTIVES collects and how it is used. By using our website and products, you consent to the practices described below.</p>
+
+        <h3>Data Collection</h3>
+        <p>We do not directly collect personally identifiable information through this website itself. Any data collection related to our mobile applications (like Mood Tracker) is done strictly within those applications and is subject to their individual privacy agreements, primarily focusing on local, anonymized data (e.g., app usage metrics, crash reports).</p>
+        
+        <h3>Third-Party Services</h3>
+        <p>We use third-party services that may collect information. These include:</p>
+        <ul>
+            <li><strong>Google AdSense:</strong> For advertising. Google's use of advertising cookies enables it and its partners to serve ads based on your visit to this and other sites. You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google's Ads Settings</a> or <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">Ads Settings</a>.</li>
+            <li><strong>Dropbox / Onelineplayer:</strong> For video hosting and streaming content.</li>
+            <li><strong>Google Analytics (if implemented):</strong> For website traffic analysis.</li>
+        </ul>
+
+        <h3>External Links</h3>
+        <p> This site contains links to other websites (e.g., Mediafire, Instagram, YouTube, Dropbox). We are not responsible for the privacy practices or the content of these external sites. </p>
+
+        <h3>Changes to This Policy</h3>
+        <p> We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. </p>
+
+        <button onclick="closePopup('privacyPopup')" class="popup-button popup-continue-btn">I Understand</button>
+    </div>
+  </div>
+
+  <div id="contactPopup" class="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="contactPopupHeading">
+    <div class="popup-content">
+        <button class="popup-close-btn" onclick="closePopup('contactPopup')" aria-label="Close Contact Information">×</button>
+        <h2 id="contactPopupHeading">Contact VK INTERACTIVES</h2>
+        <div class="contact-section">
+            <h3>General & Support Enquiries</h3>
+            <p><strong>Email:</strong> <a href="mailto:vk.vinith001@gmail.com">vk.vinith001@gmail.com</a></p>
+            <p>For technical support, feedback on apps, or general questions.</p>
+        </div>
+        <div class="contact-section">
+            <h3>Business, Partnerships & Sponsorships</h3>
+            <p><strong>Email:</strong> <a href="mailto:vishaljoshua1111@gmail.com">vishaljoshua1111@gmail.com</a></p>
+            <p>Contact Vishal Joshua for collaboration opportunities, advertising, and financial inquiries.</p>
+        </div>
+        <div class="contact-section">
+            <h3>Social Media</h3>
+            <p>Follow us on Instagram for the quickest updates and behind-the-scenes content.</p>
+            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/vk_interactives?igsh=MTNhc3J2bGRnNzNwZg==" target="_blank" rel="noopener noreferrer">@vk_interactives</a></p>
+        </div>
+        <button onclick="closePopup('contactPopup')" class="popup-button popup-close-contact-btn">Close</button>
+    </div>
+  </div>
+
+  <div id="partnersPopup" class="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="partnersPopupHeading">
+    <div class="popup-content">
+        <button class="popup-close-btn" onclick="closePopup('partnersPopup')" aria-label="Close Partners List">×</button>
+        <h2 id="partnersPopupHeading">🤝 Our Valued Partners</h2>
+        <p style="text-align: center; color: var(--royal-gold); font-size: 1rem; margin-bottom: var(--spacing-lg);">Strategic alliances that help us create the best products for you.</p>
+        <div class="partners-container" id="partnersContent">
+            </div>
+        <button onclick="closePopup('partnersPopup')" class="popup-button popup-close-partners-btn">Back to Site</button>
+    </div>
+  </div>
+
+  <div id="supporterPopup" class="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="supporterPopupHeading">
+    <div class="popup-content supporter-gallery-block">
+        <button class="popup-close-btn" onclick="closePopup('supporterPopup')" aria-label="Close Supporter Spotlight">×</button>
+        <h2 id="supporterPopupHeading">✨ Supporter Spotlight</h2>
+        <p style="text-align: center; color: #ccc; font-size: 1rem; margin-bottom: var(--spacing-lg);">Thank you to the individuals who make our projects possible through their incredible support.</p>
+        <div class="supporter-container" id="supporterContent">
+             </div>
+        <button onclick="closePopup('supporterPopup')" class="popup-button popup-close-supporter-btn">Close</button>
+    </div>
+  </div>
+  
+  <div id="crochetPopup" class="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="crochetPopupHeading">
+    <div class="popup-content">
+        <button class="popup-close-btn" onclick="closePopup('crochetPopup')" aria-label="Close Crochet Hub">×</button>
+        <h2 id="crochetPopupHeading" class="hub-title"> WEB PROJECTS</h2>
+        <p style="text-align: center; color: var(--yarn-text); font-size: 1rem; margin-bottom: var(--spacing-lg);">A showcase of our  open-source WEB PROJECTS .</p>
+        <div class="search-bar-container">
+            <input type="text" id="crochetSearchInput" placeholder="Search patterns or tutorials..." oninput="renderCrochet(this.value)">
+            <button onclick="renderCrochet()">Search</button>
+        </div>
+        <div id="crochetContent">
+            </div>
+        <button onclick="closePopup('crochetPopup')" class="popup-button popup-close-crochet-btn" style="background-color: var(--yarn-accent); color: black;">Back to Site</button>
+    </div>
+  </div>
+
+
+  <script>
+    // --- DATA STRUCTURES (Simulated Database) ---
+    const gamesData = [
+        { title: "To the Life (In Dev)", description: "Our flagship, story-driven, choice-based life simulation game. Currently in heavy development. Wishlist now!", videoSrc: "https://www.youtube.com/embed/g2qF70m589s?controls=0&modestbranding=1", // Placeholder for TtL trailer
+          linkText: "Follow on Instagram", link: "https://www.instagram.com/vk_interactives?igsh=MTNhc3J2bGRnNzNwZg==", tags: ["game", "development", "flagship"] },
+        { title: "CyberFun2D (Demo)", description: "A fast-paced 2D platformer set in a vibrant neon cyberpunk city. Download the free demo!", videoSrc: "https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=false&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fpmdmce0thctd644wq96xk%2Fshorts-vtuber.mp4%3Frlkey%3D57sbw59ndzxeiz2wch2xqevy1%26st%3Db1o80xu4%26raw%3D1&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto",
+          linkText: "Download Demo", link: "#cyberfun2d-demo-download", tags: ["game", "demo"] },
+        { title: "The King's Guard (Out Now)", description: "A simple, retro-style defense game with pixel art aesthetics. Available on Android.", videoSrc: null,
+          linkText: "Get it on Google Play", link: "#kings-guard-download", tags: ["game", "release"] }
+    ];
+
+    const appsData = [
+        { title: "Mood Tracker Pro", description: "The premium version of our popular mental wellness app with advanced analytics and cloud sync.", videoSrc: "https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=false&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fpmdmce0thctd644wq96xk%2Fshorts-vtuber.mp4%3Frlkey%3D57sbw59ndzxeiz2wch2xqevy1%26st%3Db1o80xu4%26raw%3D1&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto",
+          linkText: "Buy Now", link: "#mood-tracker-pro-buy", tags: ["app", "premium", "wellness"] },
+        { title: "MotivateMe!", description: "A simple daily affirmation and goal-setting app designed for a quick productivity boost.", videoSrc: null,
+          linkText: "Free Download", link: "#motivateme-download", tags: ["app", "free", "utility"] },
+        { title: "M&M: Simple Calculator", description: "A clean, functional, and fast calculator for all your quick math needs.", videoSrc: null,
+          linkText: "Get it Now", link: "#mm-calculator-download", tags: ["app", "utility"] }
+    ];
+    
+    // NEW Data Structure for Top Apps (can reference existing projects)
+    const topAppsData = [
+        { title: "Mood Tracker Pro (TOP)", description: "The premium version of our popular mental wellness app with advanced analytics and cloud sync.", videoSrc: appsData[0].videoSrc, // Reference Mood Tracker Pro's video
+          linkText: appsData[0].linkText, link: appsData[0].link, tags: ["app", "premium", "wellness"] },
+        { title: "CyberFun2D (TOP)", description: "A fast-paced 2D platformer set in a vibrant neon cyberpunk city. Download the free demo!", videoSrc: gamesData[1].videoSrc, // Reference CyberFun2D's video
+          linkText: gamesData[1].linkText, link: gamesData[1].link, tags: ["game", "demo"] },
+        { title: "To the Life (TOP)", description: "The story-driven life sim everyone is waiting for. Follow its progress!", videoSrc: gamesData[0].videoSrc, // Reference To the Life's video
+          linkText: gamesData[0].linkText, link: gamesData[0].link, tags: ["game", "development", "flagship"] }
+    ];
+
+    const crochetData = [
+        { type: "WEB PROJECT", title: "TRACK MY SALARY", description: "An Sleek and fast tool for tracking salary and shifts", linkText: "USE NOW", link: "https://vkvinith666.github.io/TRACK-MY-SALARY/", videoSrc: "https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=false&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fpmdmce0thctd644wq96xk%2Fshorts-vtuber.mp4%3Frlkey%3D57sbw59ndzxeiz2wch2xqevy1%26st%3Db1o80xu4%26raw%3D1&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto", label: "SOURCR: GIT HUB" },
+      
+    ];
+
+    const partnersData = [
+        { title: "IndieDev Studio X", description: "Our strategic partner in game development and co-creator of the upcoming project 'Flames'.", linkText: "Visit Site", link: "#studio-x-link" },
+        { title: "Creative Minds Hub", description: "A community and platform for sharing and collaborating on digital art and design projects.", linkText: "Join Community", link: "#creative-minds-link" },
+        { title: "GameDev Tools Pro", description: "Provides cutting-edge development software and tools used in our current projects.", linkText: "View Tools", link: "#tools-pro-link" }
+    ];
+    
+    // NEW Data Structure for Supporters
+    const supporterData = [
+        { name: "VK VINITH", role: "Senior developer/Content creation/CEO", avatarSrc: "https://www.dropbox.com/scl/fi/cdzkv52elt6ahxv4qxcb2/20251210_224717.png?rlkey=1tjbc2lb4d4nypxlk6uhavsxp&st=hvhvxxk7&dl=1" , linkText: "Follow on X", link: "#supporter-x-link" },
+        { name: "VISHAL JOSHUA", role: "Marketing", avatarSrc: "https://www.dropbox.com/scl/fi/pqz6rccvovld9jcxi0feb/20251212_233852.png?rlkey=ceca3evrmpube8kmowcx39x2i&st=sgi17ehe&dl=1", linkText: "View Profile", link: "#supporter-profile-link" },
+        { name: "LOGESH", role: "Co-Developer/Sponsor", avatarSrc: "https://www.dropbox.com/scl/fi/z9o7floise8fl8pl82vem/20251212_234624.png?rlkey=hvi768luua13cqzmavdk4lflf&st=4r93vj8y&dl=1", linkText: "Instagram", link: "https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=ytp3nz5" },
+        { name: "UDHAYAN", role: "Designer/Sponsor", avatarSrc: "https://www.dropbox.com/scl/fi/by51joghjzsfbllbs6d6k/20251213_104708.png?rlkey=03ga4gzwcieltlgy6igbcdqvs&st=w66azvp1&dl=1", linkText: "Instagram", link: "https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=ytp3nz5" },
+        { name: "YOUIKA", role: "Japanese Advertisor/Tester", avatarSrc: "https://www.dropbox.com/scl/fi/4vwhj56p4lb4pxx2v48wl/20251213_001143.png?rlkey=jwbmapcqf6vkf4x4cy11m4mkn&st=v5m953ux&dl=1", linkText: "Instagram", link: "https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=ytp3nz5" },
+        { name: "LING", role: "Hongkong Advertisor/Tester", avatarSrc: "https://www.dropbox.com/scl/fi/oghgmn41k2l8sujrr1i57/20251213_001855.png?rlkey=ez63xxgpx4znj72o1dwk3eot6&st=l0y1slrc&dl=1", linkText: "Instagram", link: "https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=ytp3nz5" },
+         
+      ];
+
+
+    // --- RENDERING FUNCTIONS (For Panels & Popups) ---
+
+    /**
+     * Renders game, app, or top-app cards into their respective panels.
+     * @param {string} type - The type of data to render ('game', 'app', or 'top-app').
+     * @param {string} searchTerm - The search term from the input field.
+     */
+    function renderProjects(type, searchTerm = '') {
+        let data, container, topCountId;
+
+        if (type === 'game') {
+            data = gamesData;
+            container = document.getElementById('gameContent');
+            topCountId = 'games-count';
+        } else if (type === 'app') {
+            data = appsData;
+            container = document.getElementById('softwareContent');
+            topCountId = 'apps-count';
+        } else if (type === 'top-app') {
+            data = topAppsData;
+            container = document.getElementById('topAppContent');
+            // No count update for top apps as it's a filtered list
+        } else {
+            return;
+        }
+        
+        // Update the top count before filtering
+        if (topCountId) {
+            document.getElementById(topCountId).textContent = data.length;
+        }
+
+        container.innerHTML = ''; // Clear previous content
+
+        const lowerCaseSearchTerm = searchTerm.toLowerCase();
+        const filteredData = data.filter(project => 
+            project.title.toLowerCase().includes(lowerCaseSearchTerm) ||
+            project.description.toLowerCase().includes(lowerCaseSearchTerm) ||
+            project.tags.some(tag => tag.toLowerCase().includes(lowerCaseSearchTerm))
+        );
+
+        if (filteredData.length === 0) {
+            container.innerHTML = `<p style="text-align: center; color: #999; margin-top: 30px;">No ${type}s found matching your search term.</p>`;
+            return;
+        }
+
+        filteredData.forEach(project => {
+            const card = document.createElement('div');
+            card.className = `${type}-card`; // Will be 'game-card', 'app-card', or 'top-app-card'
+
+            const videoPlayerHtml = project.videoSrc ? `
+                <div class="card-video-container">
+                    <iframe src="${project.videoSrc}" title="${project.title} Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
+                </div>
+            ` : '';
+
+            card.innerHTML = `
+                <h3>${project.title}</h3>
+                ${videoPlayerHtml}
+                <p>${project.description}</p>
+                <a href="${project.link}" target="_blank" rel="noopener noreferrer">${project.linkText}</a>
+            `;
+            container.appendChild(card);
+        });
+    }
+
+    /**
+     * Renders crochet project cards into the crochet hub popup.
+     * @param {string} searchTerm - The search term from the input field.
+     */
+    function renderCrochet(searchTerm = '') {
+        const container = document.getElementById('crochetContent');
+        container.innerHTML = ''; // Clear previous content
+
+        const lowerCaseSearchTerm = searchTerm.toLowerCase();
+        const filteredData = crochetData.filter(item => 
+            item.title.toLowerCase().includes(lowerCaseSearchTerm) ||
+            item.description.toLowerCase().includes(lowerCaseSearchTerm) ||
+            item.type.toLowerCase().includes(lowerCaseSearchTerm) ||
+            item.label.toLowerCase().includes(lowerCaseSearchTerm)
+        );
+
+        if (filteredData.length === 0) {
+            container.innerHTML = `<p style="text-align: center; color: var(--text-color); margin-top: 30px;">No crochet items found matching your search term.</p>`;
+            return;
+        }
+
+        filteredData.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'crochet-card';
+
+            const videoPlayerHtml = item.videoSrc ? `
+                <div class="card-video-container">
+                    <iframe src="${item.videoSrc}" title="${item.title} Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
+                </div>
+            ` : '';
+
+            card.innerHTML = `
+                <span class="crochet-card-label">${item.type} | ${item.label}</span>
+                <h3>${item.title}</h3>
+                ${videoPlayerHtml}
+                <p>${item.description}</p>
+                <a href="${item.link}" target="_blank" rel="noopener noreferrer">${item.linkText}</a>
+            `;
+            container.appendChild(card);
+        });
+    }
+
+    /**
+     * Renders partner cards into the partners popup.
+     */
+    function renderPartners() {
+        const container = document.getElementById('partnersContent');
+        container.innerHTML = ''; // Clear previous content
+        
+        partnersData.forEach(partner => {
+            const card = document.createElement('div');
+            card.className = 'partner-card-royal';
+            card.innerHTML = `
+                <h3>${partner.title}</h3>
+                <p>${partner.description}</p>
+                <a href="${partner.link}" target="_blank" rel="noopener noreferrer">${partner.linkText}</a>
+            `;
+            container.appendChild(card);
+        });
+    }
+
+    /**
+     * Renders supporter cards into the supporter spotlight popup.
+     */
+    function renderSupporters() {
+        const container = document.getElementById('supporterContent');
+        container.innerHTML = ''; // Clear previous content
+        
+        supporterData.forEach(supporter => {
+            const card = document.createElement('div');
+            card.className = 'supporter-card-image';
+            card.innerHTML = `
+                <img src="${supporter.avatarSrc}" alt="${supporter.name}'s Avatar" class="supporter-avatar">
+                <span class="supporter-name-image">${supporter.name}</span>
+                <span class="supporter-role-image">${supporter.role}</span>
+                <a href="${supporter.link}" target="_blank" rel="noopener noreferrer" class="supporter-link">${supporter.linkText}</a>
+            `;
+            container.appendChild(card);
+        });
+    }
+
+
+    // --- EVENT HANDLERS & UTILITY FUNCTIONS ---
+
+    /**
+     * Hides the splash screen and shows the main content.
+     */
+    function hideSplashScreen() {
+        const splashScreen = document.getElementById('splash-screen');
+        const mainContent = document.getElementById('main-content');
+        
+        splashScreen.classList.add('fade-out');
+        
+        // Wait for the fade-out transition to finish (0.5s)
+        setTimeout(() => {
+            splashScreen.style.display = 'none';
+            mainContent.classList.add('visible');
+            document.body.style.overflow = ''; // Restore body scrolling
+        }, 500);
+    }
+
+    /**
+     * Opens a specified slide panel and hides the main panel buttons.
+     * @param {string} id - The ID of the panel to open.
+     */
+    function openPanel(id) {
+        // Close other panels first
+        document.querySelectorAll('.slide-panel.open').forEach(panel => {
+            if (panel.id !== id) {
+                panel.classList.remove('open');
+            }
+        });
+
+        // Ensure content is rendered before opening the panel
+        if (id === 'gamePanel') renderProjects('game');
+        else if (id === 'softwarePanel') renderProjects('app');
+        else if (id === 'topAppsPanel') renderProjects('top-app');
+
+        document.getElementById(id).classList.add('open');
+        
+        // Hide panel buttons to avoid interaction confusion
+        document.getElementById('gameBtn').classList.add('hidden');
+        document.getElementById('softwareBtn').classList.add('hidden');
+        document.getElementById('topAppsBtn').classList.add('hidden');
+
+        document.body.style.overflow = 'hidden'; // Prevent scrolling background
+    }
+
+    /**
+     * Closes a specified slide panel and shows the main panel buttons.
+     * @param {string} id - The ID of the panel to close.
+     */
+    function closePanel(id) {
+        document.getElementById(id).classList.remove('open');
+        
+        // Check if any other panels or popups are still open
+        const panelsOpen = document.querySelectorAll('.slide-panel.open').length;
+        const popupsOpen = Array.from(document.querySelectorAll('.popup-overlay')).filter(
+            overlay => overlay.style.display === 'flex'
+        ).length;
+
+        // Only restore buttons/scroll if everything is closed
+        if (panelsOpen === 0 && popupsOpen === 0) {
+            document.getElementById('gameBtn').classList.remove('hidden');
+            document.getElementById('softwareBtn').classList.remove('hidden');
+            document.getElementById('topAppsBtn').classList.remove('hidden');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+    }
+
+    /**
+     * Opens a specified popup and hides any open side panels.
+     * @param {string} id - The ID of the popup to open.
+     */
+    function openPopup(id) {
+        // Render dynamic content for the popup if necessary
+        if (id === 'partnersPopup') renderPartners();
+        else if (id === 'supporterPopup') renderSupporters();
+        else if (id === 'crochetPopup') renderCrochet(); // Render web projects
+
+        // Close all open side panels before opening a popup
+        document.querySelectorAll('.slide-panel.open').forEach(panel => {
+            panel.classList.remove('open');
+        });
+        document.getElementById('gameBtn').classList.remove('hidden');
+        document.getElementById('softwareBtn').classList.remove('hidden');
+        document.getElementById('topAppsBtn').classList.remove('hidden');
+
+        document.getElementById(id).style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling background
+    }
+
+    /**
+     * Closes a specified popup.
+     * @param {string} id - The ID of the popup to close.
+     */
+    function closePopup(id) {
+        document.getElementById(id).style.display = 'none';
+        
+        // Only restore scroll if no other popups or panels are open
+        const panelsOpen = document.querySelectorAll('.slide-panel.open').length;
+        // Re-check for other visible popups by iterating through the list
+        const popupsOpen = Array.from(document.querySelectorAll('.popup-overlay')).filter(
+            overlay => overlay.style.display === 'flex' && overlay.id !== id
+        ).length;
+
+        if (panelsOpen === 0 && popupsOpen === 0) {
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+    }
+
+
+    /**
+     * Handles the display logic for the FAQ section.
+     * @param {HTMLElement} questionElement - The clicked FAQ question element.
+     */
+    function toggleFaq(questionElement) {
+        const expanded = questionElement.getAttribute('aria-expanded') === 'true';
+        const answerId = questionElement.getAttribute('aria-controls');
+        const answerElement = document.getElementById(answerId);
+
+        // Close all other open FAQs
+        document.querySelectorAll('.faq-question[aria-expanded="true"]').forEach(otherQuestion => {
+            if (otherQuestion !== questionElement) {
+                otherQuestion.setAttribute('aria-expanded', 'false');
+                document.getElementById(otherQuestion.getAttribute('aria-controls')).classList.remove('open');
+            }
+        });
+
+        // Toggle the clicked FAQ
+        questionElement.setAttribute('aria-expanded', !expanded);
+        if (!expanded) {
+            answerElement.classList.add('open');
+        } else {
+            answerElement.classList.remove('open');
+        }
+    }
+
+    /**
+     * Sets up event listeners for dynamically added FAQ elements.
+     */
+    function setupEventListeners() {
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.onclick = function() {
+                toggleFaq(this);
+            };
+        });
+    }
+    
+    /**
+     * Initializes the content and functionality that requires project data.
+     */
+    function setupPopupButtons() {
+        // Initial rendering of counts (calls renderProjects without search)
+        renderProjects('game');
+        renderProjects('app');
+    }
+
+    // Run setup after the DOM content is fully loaded and manage the splash screen transition
+    document.addEventListener('DOMContentLoaded', () => {
+        // Run the main content rendering (panels, etc.)
+        setupEventListeners();
+        setupPopupButtons();
+
+        // Delay the splash screen removal for 5 seconds (5000ms)
+        setTimeout(hideSplashScreen, 5000);
+    });
+  </script>
+</body>
+</html>
